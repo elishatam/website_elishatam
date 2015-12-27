@@ -1,0 +1,133 @@
+<html>
+<head>
+
+<title> Stanford ME 218A Final Project, Fall 2009</title>
+
+<link rel="stylesheet" type="text/css" href="mystyles.css">
+
+
+</head>
+
+<body>
+<style1>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc">
+
+  <tr>
+    <td align="left" colspan=3>
+	<img src="photos/HeadingFirefox.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td colspan=3>
+	<hr>
+    </td>
+
+  </tr>
+
+  <tr>
+    <td align="center" font size="0.9em" colspan=3>
+	<a href="index.html">OVERVIEW</a>
+	 | <a href="hardware.html">HARDWARE</a>	
+	 | <a href="software.html">SOFTWARE</a>	
+	 | <a href="gallery.html">GALLERY</a>	
+	 | <a href="theteam.html">THE TEAM</a>	
+
+<br>
+<br>
+    </td>
+  </tr>
+
+  <tr>
+    <td valign="top" width="120">
+	<a href="index.html">Overview</a>
+<br><br>
+        <a href="arm.html">Arm</a>
+<br><br>
+        <a href="positioning.html">Positioning</a>
+
+
+<br><br>
+        <a href="driveTrain.html">Drive Train</a>
+    </td>
+
+
+    <td valign="top" width="530">
+	<b>POSITIONING METHOD</b>
+	<br>
+	<br>
+	<br>
+	<br>
+	Since our strategy utilized an arm to knock off the hats, our robot needed a reliable path-planning method to navigate the field. On the right is an image of the dimensions of the playing field in inches.
+	</td>
+	<td>
+	<img src="photos/Field.jpg" width="350">
+	</td>
+  </tr>
+  
+  <tr>
+    <td>
+	</td>
+    <td>
+	We decided that our robot should navigate to one of 8 positions on the board, identified with X's in the image on the right.
+	</td>
+	<td>
+	<img src="photos/Board8Positions.jpg" width="300">
+	</td>
+  </tr>
+  
+  <tr>
+    <td>
+	</td>
+    <td>
+	To simplify our path planning, we broke the board up into 4 distinct neighborhoods (A, B, C & D) - one in each quadrant. Each neighborhood contained 2 x-positions from which 4 targets could be reached. Each neighborhood had a central point, identified with circles.
+	</td>
+	<td>
+	<img src="photos/BoardNeighborhoods.jpg" width="300">
+	</td>
+  </tr>
+
+  <tr>
+	<td>
+	</td>
+	<td colspan="2">
+	From there, we developed the maneuvers needed to reach each of the 8 x-positions. Moving between these positions and the home based required a combination of only 5 basic maneuvers:
+	<ol>
+	  <li><b>Orient</b> - turn the robot from his current orientation to some new heading using the motor encoders to determine the number of degrees turned</li>
+	  <li><b>TrackTape</b> - move straight while making sure the black tape remained aligned with the front three tape sensors by adjusting wheel speeds according to the location of the black line relative to the front three tape sensors</li>
+	  <li><b>MoveStop</b> - move forward and come to a complete stop at a given distance using the motor encoders to calculate the distance traveled</li>
+	  <li><b>MoveRoll</b> - move forward a given distance but do not come to a stop thereafter using the motor encoders to calculate the distance traveled</li>
+	  <li><b>TapeAlign</b> - move forward until black tape is sensed by the tape sensor located in the center of the robot, then turn a given direction so that the black tape is aligned with the front tape sensors (this maneuver leaves the robot in a position to start tracking the black line)</li>
+	</ol>
+	<br>
+	<br>
+	<a href="photos/TestPosition.jpg"><img src="photos/TestPosition.jpg" width="350" align="right" border="1"></a>We set up multi-dimensional arrays that specified paths from each position to the other 3 neighborhoods. We also pre-programmed the paths from the central point of each neighborhood to the 2 x-positions in that neighborhood. We also encoded the orientation the robot needed to face to attack the target. With these data structures in place, it was straightforward to develop a series of maneuvers to move our robot between any two positions on the board.
+	<br>
+	<br>
+	The image on the right illustrates the paths and orientations our robot would require to reach any of the 8 x-positions.
+	<br>
+	<br>
+	Our approach to path-planning has many advantages. First, we only have 5 basic maneuvers to code up and debug (most of which are only 4 or 5 steps long). Once these basic maneuvers were working, we could debug our path-planning code at our workstation without the need for repeated testing on the game board (which was in high demand at reasonable times of the day) because if our robot was planning on executing the right series of maneuvers, we knew he'd successfully get to the correct location.
+	<br>
+	<br>
+	Second, this approach is relatively simple and works for either the half court or full court game scenarios. Third, the amount of memory used for the data structures is relatively small (less than 500 bytes). Lastely, going back to the neighborhood points frequently means our robot repeatedly re-establishes his position on the board using the black tape. This makes it unlikely for him to get lost.
+	<br>
+	<br>
+	<br>
+	<br>
+	</td>
+  </tr>
+
+	
+	
+	
+
+	</td>
+  </tr>
+
+
+</style1>
+
+
+</body>
+
+</html>

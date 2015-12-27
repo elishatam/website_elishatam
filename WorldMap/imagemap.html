@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+
+<title> elisha tam </title>
+
+<style type="text/css">
+body {font-family: tahoma; arial, sans-serif;}
+
+/* set the size of the definition list <dl> and add bckgrd image */
+#imap {
+  display:block;
+  width:500px;
+  height:291px;
+  background:url('photos/blacklabs.jpg') no-repeat;
+  position:relative;
+  }
+
+#imap a#title {
+  display:block;
+  width:500px;
+  height:0;
+  padding-top:291px;
+  overflow:hidden;
+  position:absolute;
+  left:0;
+  top:0;
+  background:transparent url('photos/blacklabsHover.jpg') no-repeat 400px 400px;
+  cursor;default;
+}
+
+* html #imap a#title {
+  height:240px;
+  height:0;
+  }
+
+#imap a#title:hover {
+  background-position: 0 0;
+  z-index:10l
+  }
+
+#imap dd {
+  position:absolute;
+  padding:0; margin:0;}
+#imap #picL {
+  left:50px; top:30px; z-index:20;}
+#imap #picR {
+  left:315px; top:60px; z-index:20;}
+
+#imap a#L, #imap a#R {
+  display:block;
+  width:100px;
+  height:100px;
+  background:transparent url('photos/TranSquare.gif') -100px -100px no-repeat;
+  text-decoration:none;
+  z-index:20;
+  }
+
+#imap a#L:hover, #imap a#R:hover {
+  background-position:0 0;
+  }
+
+#imap a span, #imap a:visited span {
+  display:none;
+  }
+
+
+#imap a:hover span {
+  position:absolute;
+  width:480px;
+  display:block;
+  font-family:tahoma;
+  font-size:12px;
+  background:#fff;
+  color:#000;
+  border:1px solid #000;
+  padding:5px;
+  }
+* html #imap a:hover span {
+  width:400px; width:300px;
+  }
+
+#imap a#L:hover span {
+  left:-50px;
+  top:261px;
+  }
+#imap a#R:hover span {
+  left:-315px;
+  top:231px;
+  }
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<dl id="imap"> 
+  <dt>
+   <a id="title" href="#nogo" title="Puppies"> 
+   The Puppies
+   </a>
+  </dt>
+
+<dd id="picL">
+  <a id="L" title="Left Puppy" href="#nogo">
+   <span>
+   L Puppy is cute
+   </span>
+  </a>
+</dd>
+
+<dd id="picR">
+  <a id="R" title="Right Puppy" href="#nogo">
+   <span>
+   R Puppy is soft
+   </span>
+  </a>
+</dd>
+
+</dl>	
+
+
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+<html>
+<head>
+
+<title> Stanford ME 218A Final Project, Fall 2009</title>
+
+<link rel="stylesheet" type="text/css" href="mystyles.css">
+
+
+</head>
+
+<body>
+<style1>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc" bgcolor="#ffffff">
+
+  <tr>
+    <td align="left" colspan=4>
+	<img src="photos/HeadingRIFireBlack.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td colspan=4>
+	<hr>
+    </td>
+
+  </tr>
+
+  <tr>
+    <td align="center" font size="0.9em" colspan=4>
+	<a href="index.html">MISSION</a>
+	 | <a href="hardware.html">HARDWARE</a>	
+	 | <a href="software.html">SOFTWARE</a>	
+	 | <a href="gallery.html">GALLERY</a>	
+	 | <a href="theteam.html">THE TEAM</a>	
+
+<br>
+<br>
+    </td>
+  </tr>
+
+  <tr>
+    <td valign="top" width="160">
+        <a class="inside" href="CADDrawings.html">CAD drawings</a>
+<br><br>
+        <a class="inside" href="circuitdesigns.html">Circuit Designs</a>
+<br><br>
+
+        <a class="inside" href="BOM3.html" target="_blank">Bill Of Materials</a>
+
+
+    </td>
+
+    <td width="30">
+    </td>
+
+    <td align="left" valign="top" width="400">
+	<a href="photos/board.jpg"><img src="photos/board.jpg" width="350"></a>
+    </td>
+    <td valign="center">
+	<a href="#C32">1. C32</a>
+	<br><a href="#FReceiver">2. FLICKER Receiver</a>
+	<br><a href="#FTransmitter">3. FLICKER Transmitter</a>
+	<br><a href="#CIA">4. CIA Analyst Time Map</a>
+	<br><a href="#IR">5. IR LED - Phototransistor</a>
+	<br><a href="#Stage">6. Stage Indicator LEDs</a>
+	<br><a href="#Grapple">7. Grapple Dial</a>
+	<br><a href="#Stepper">8. Stepper Motor</a>
+	<br><a href="#Disk">9. Disk Switch</a>
+	<br><a href="#Download">10. Download LEDs</a>
+	<br><a href="#MP3">11. MP3 Player</a>
+	<br><a href="#White">12. White Situation Indicator LEDs</a>
+	<br><a href="#Red">13. Red Situation Indicator LEDs</a>
+	<br>
+	<br>
+	<br>
+	<br><a href="#Datasheets">Datasheets</a>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+    </td>
+    <td>
+    </td>
+    <td colspan="2">
+<br>
+<br>
+	<b>Complete Schematic</b>
+	<br>
+	<a href="photos/schematics/Complete.jpg"><img src="photos/schematics/Complete.jpg" width="600"></a>
+<br>
+<br>
+	<a name="C32"><b>1.) C32 Microcontroller Pin Layout</b></a>
+	<br>O stands for Output. I stands for Input.
+	<a href="photos/schematics/C32.jpg"><img src="photos/schematics/C32.jpg" width="600"></a>
+<br>
+<br>
+
+	<a name="FReceiver"><b>2.) FLICKER Receiver</b></a>
+	<br>Optoisolator (H11A1), 6-pin RJ-11 connectors, Single-Pole Single-Throw push button, 9.1Kohm resistor
+	<br>To turn on, our FLICKER must either be activated by the previous FLICKER or by pressing the Force Start button. When the previous FLICKER triggers our optoisolator, the circuit closes and the C32 reads 0V instead of 5V. 
+<br>Similarly, if the Force Start button is pressed, the circuit closes and the C32 reads 0V instead of 5V. 
+	<a href="photos/schematics/OptoIsolatorReceiver.jpg"><img src="photos/schematics/OptoIsolatorReceiver.jpg" width="400"></a>
+<br>
+<br>
+
+	<a name="FTransmitter"><b>3.) FLICKER Transmitter</b></a>
+	<br>Optoisolator (H11A1), 6-pin RJ-11 connectors, 2N7000 MOSFET, resistors: 390ohm, 1Kohm
+	<br>Our FLICKER is connected in line with the next FLICKER through a 6-pin RJ-11 connector. To trigger the next FLICKER, the C32 pulses high to switch on the MOSFET and send 9.8mA of current for 75ms. A 1Kohm pull-down resistor is used to tie the output pin low otherwise.
+<br>
+	<a href="photos/schematics/OptoIsolatorTransmitter.jpg"><img src="photos/schematics/OptoIsolatorTransmitter.jpg" width="400"></a>
+<br>
+<br>
+
+	<a name="CIA"><b>4.) CIA Analyst Time Map</b></a>
+	<br>4-to-16 line decoder (MM74HC154N), 15 yellow LEDs, 470ohm resistor.
+	<br>A decoder controls the CIA Analyst Time Map. Depending on the binary information sent by the 4 select lines, a specific output pin is dropped low. The LED corresponding to this output pin then turns on. G1N and G2N need to be tied low in order for the decoder to read the select lines.
+	<a href="photos/schematics/16LineDecoder.jpg"><img src="photos/schematics/16LineDecoder.jpg" width="700"></a>
+<br>
+<br>
+
+	<a name="IR"><b>5.) IR LED - Phototransistor Pair</b></a>
+	<br>IR LED Emitter (LTR5208E), and IR Phototransistor (LTR3208E), Operational Amplifier (LM324N), Comparator (LM 339N), 0.1uF capacitor, resistors: 6.2Kohm, 100Kohm, 10Kohm, 2 1Kohm, 2 470Kohm, 3.9Kohm, 2 3.3Kohm
+	<br>A signal conditioning circuit is used to create a clear voltage signal at the C32 input. When the beam is blocked, the circuit sends a low voltage signal to the C32.
+
+	<a href="photos/schematics/IRPhototransistor.jpg"><img src="photos/schematics/IRPhototransistor.jpg" width="700"></a>
+<br>
+<br>
+
+	<a name="Stage"><b>6.) Stage Indicator LEDs</b></a>
+	<br>2-4 line decoder (MM74HC139N), 3 Red LEDs, 470ohm resistor
+	<br>Red Stage Indicator LEDs are controlled by a decoder. Depending on the binary information sent by the 2 select lines, a specific output pin is dropped low. The LED corresponding to this output pin turns on.  G needs to be tied low in order for the decoder to read the select lines. 
+	<br>
+	<a href="photos/schematics/StageLEDs.jpg"><img src="photos/schematics/StageLEDs.jpg" width="500"></a>
+<br>
+<br>
+
+	<a name="Grapple"><b>7.) Grapple Dial</b></a>
+	<br>A potentiometer dial is used to make a voltage divider circuit to input an analog signal to the C32. The potentiometer is connected to 5V and ground. The output voltage of the potentiometer varies from 0 to 5V depending on the position of the dial. This voltage is sent to an analog input port on the C32, which controls the stepper motor relative to the analog input value.
+	<br>
+	<a href="photos/schematics/GrappleDial.jpg"><img src="photos/schematics/GrappleDial.jpg" width="300"></a>
+<br>
+<br>
+
+	<a name="Stepper"><b>8.) Stepper Motor</b></a>
+	<br>MC3479 Stepper Motor, 1N5221A Zener diode, 0.1uF capacitor, resistors: 47Kohm, 2.2Kohm
+	<br>A stepper motor is used to raise and lower Tom Cruise.  His speed is controlled by the pulse rate from the C32 relative to how far the grapple dial is turned. His position is monitored in software by the number of steps sent to the motor.  A zener diode is used to snub any voltage spikes that occur when the state of the motor changes.
+	<br>
+	<a href="photos/schematics/StepperMotor.jpg"><img src="photos/schematics/StepperMotor.jpg" width="650"></a>
+<br>
+<br>
+
+	<a name="Disk"><b>9.) Disk Switch</b></a>
+	<br>Single-Pole Single-Throw push button, 6.8Kohm
+	<br>A SPST push button is placed in back of the disk drive. When the disk is inserted and ejected, the disk carriage is lowered and raised, which depresses and presses the button. When the button is pressed, the circuit closes and the voltage output to the C32 changes from 5V to 0V.  Debouncing was accounted for in software.
+	<br>
+	<a href="photos/schematics/DiskSwitch.jpg"><img src="photos/schematics/DiskSwitch.jpg" width="300"></a>
+<br>
+<br>
+
+	<a name="Download"><b>10.) Download LEDs</b></a>
+	<br>LM339N Comparator, Shift Register (74HC164N), 8 green LEDs, resistors: 8 470ohm, 2 3.3Kohm, 3.9Kohm, 2.2Kohm
+	<br>A shift register was used to control the 9 Download LEDs. This allowed us to use only 2 C32 outputs. The input D2 is tied high since the shift register logically ANDs the data inputs D1 and D2. The reset input is also tied high; otherwise, a low input resets the shift register. 
+	<br>Each time the clock is pulsed, the input from D1 shifts into the Q outputs. If D1 is high, the LED will light.
+	<br>We configured our 8 LEDs to turn on sequentially from left to right. After 1 second, the following light turns on.
+	<br>Comparators with hysteresis (Schmitt triggers) are used to adjust for the fast input signals read by the shift register.
+	<br>
+	<a href="photos/schematics/DownloadLEDs.jpg"><img src="photos/schematics/DownloadLEDs.jpg" width="700"></a>
+<br>
+<br>
+
+	<a name="MP3"><b>11.) MP3 Player</b></a>
+	<br>2 2N7000 MOSFETS, 2 10Kohm resistors
+	<br>Music is controlled by the buttons on an MP3 player. A 2N7000 MOSFET controls the current running through each button. When the C32 sends a high voltage signal, the MOSFET switches on and closes the button circuit, effectively pushing the button on the MP3 player. 10Kohm pull down resistors are used to prevent accidental activation of the buttons.
+	<br>There is only one track on the MP3 player. At the initialization of the FLICKER, we activate the PLAY button twice using software. The first PLAY ensures that the MP3 player is in PLAY mode, and the second PLAY pauses the track. When the theme music is required at the start of the game or at Mission Success, we activate the NEXT button with software and the theme music plays automatically from the beginning of the track.
+	<br>
+	<a href="photos/schematics/MP3Player.jpg"><img src="photos/schematics/MP3Player.jpg" width="550"></a>
+<br>
+<br>
+
+	<a name="White"><b>12.) White Situation Indicator LEDs</b></a>
+	<br>IRLZ34N N-Channel Power MOSFET, 7 White LEDs JAMECO MCDL-5013UWC, 7 68ohm resistors
+	<br>These LEDs turn on after the IR beam has been deactivated. When the C32 sends a high voltage to the MOSFET, the MOSFET switches on, and current flows through the LEDs.
+	<br>
+	<a href="photos/schematics/ActiveLEDs.jpg"><img src="photos/schematics/ActiveLEDs.jpg" width="600"></a>
+<br>
+<br>
+
+	<a name="Red"><b>13.) Red Situation Indicator LEDs</b></a>
+	<br>IRLZ34N N-Channel Power MOSFET, 7 Red Jumbo LEDs, 7 120ohm resistors
+	<br>These LEDs turn on at the start of the game when the IR beam is still activated. When the C32 sends a high voltage to the MOSFET, the MOSFET switches on, and current flows through the LEDs.
+	<br>
+	<a href="photos/schematics/FailLEDs.jpg"><img src="photos/schematics/FailLEDs.jpg" width="600"></a>
+
+
+<br>
+<br>
+<br>
+<br>
+<a name="Datasheets"><b>DATASHEETS</b></a>
+<br>
+<a class="inside" href="http://www.datasheetcatalog.org/datasheet2/9/0oa8seftq8d6peigox0lrx6e9wwy.pdf" target="_blank">LM324N Operational Amplifier</a>
+<br>
+<a class="inside" href="http://www.datasheetcatalog.org/datasheet/motorola/MC3302P.pdf" target="_blank">LM339 Comparator</a>
+<br>
+<a class="inside" href="http://www.datasheetcatalog.org/datasheet/motorola/H11A1.pdf" target="_blank">H11A1 Optical Isolator</a>
+<br>
+<a class="inside" href="http://pdf1.alldatasheet.com/datasheet-pdf/view/53748/FAIRCHILD/MM74HC154N.html" target="_blank">MM74HC154N 4-16 Line Decoder</a>
+<br>
+<a class="inside" href="http://pdf1.alldatasheet.co.kr/datasheet-pdf/view/53745/FAIRCHILD/MM74HC139N.html" target="_blank">MM74HC139N 2-4 Line Decoder</a>
+<br>
+<a class="inside" href="http://www.jameco.com/Jameco/Products/ProdDS/25216.pdf" target="_blank">MC3479 Single chip stepper motor driver</a>
+<br>
+<a class="inside" href="http://www.datasheetcatalog.org/datasheet2/e/0l5glttjoy0dhlxticge3ilteyfy.pdf" target="_blank">74HC164N Shift Register</a>
+<br>
+<a class="inside" href="http://www.fairchildsemi.com/ds/2N/2N7000.pdf" target="_blank">2N7000 N-Channel MOSFET</a>
+<br>
+<a class="inside" href="http://www.datasheetcatalog.org/datasheet/irf/irlz34n.pdf" target="_blank">IRLZ34N N-Channel Power MOSFET</a>
+<br>
+
+
+
+
+
+	
+    </td>
+
+  </tr>
+
+
+</style1>
+
+
+</body>
+
+</html>

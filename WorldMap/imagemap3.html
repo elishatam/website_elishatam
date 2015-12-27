@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+
+<title> elisha tam </title>
+
+<style type="text/css">
+body {font-family: tahoma; arial, sans-serif;}
+
+#info {padding:2em 0;}
+
+
+#m-puppies {
+  position: relative;
+  width: 500px;
+  height: 291px;
+  background: url('photos/blacklabs.gif') no-repeat;
+  margin: 2em auto;
+  padding: 0;
+  }
+
+#m-puppies li {
+  display:block;
+  position:absolute;
+  list-style:none;
+  margin:0;
+  padding:0;
+  }
+#m-puppies a {
+  display:block;
+  text-indent:-9999px;
+  text-decoration:none;
+  outline:none;
+  cursor:default;
+  }
+
+#LeftPup {
+  left: 0px;
+  top: 7px;
+  width: 154px;
+  height: 230px;
+  z-index: 10;
+  }
+#RightPup {
+  left: 288px;
+  top: 53px;
+  width: 200px;
+  height: 235px;
+  }
+
+/* Link height, not the object height */
+#LeftPup a {
+  height: 230px;
+  }
+#RightPup a {
+  height: 235px;
+  }
+
+/* tells browser where to look for the hover image, outside the visible image */
+#LeftPup a:hover, #RightPup a:hover {
+  background: url('photos/blacklabs.gif');
+  background-repeat:no-repeat;
+  }
+#LeftPup a: hover {
+  background-position:-100px -100px
+  }
+#RightPup a: hover {
+  background-position:-100px -100px
+  }
+
+
+
+
+</style>
+
+</head>
+
+
+
+
+
+<body>
+
+<dl id="gmap">
+<dt><a id="title2" href="#nogo">Black Labs</a></dt>
+<dd><a id="LeftPup" title="Left Pup" href="1.html"><span>Left Pup</span></a></dd>
+<dd><a id="RightPup" title="Right Pup" href="2.html"><span>Right Pup</span></a></dd>
+</dl>
+
+
+
+</body>
+
+</html>

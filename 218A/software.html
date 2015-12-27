@@ -1,0 +1,247 @@
+<html>
+<head>
+
+<title> Stanford ME 218A Final Project, Fall 2009</title>
+
+<link rel="stylesheet" type="text/css" href="mystyles.css">
+
+
+</head>
+
+<body>
+<style1>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc" bgcolor="#ffffff">
+
+
+  <tr>
+    <td align="left" colspan=4>
+	<img src="photos/HeadingRIFireBlack.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td colspan=4>
+	<hr>
+    </td>
+
+  </tr>
+
+  <tr>
+    <td align="center" font size="0.9em" colspan=4>
+	<a href="index.html">MISSION</a>
+	 | <a href="hardware.html">HARDWARE</a>	
+	 | <a href="software.html">SOFTWARE</a>	
+	 | <a href="gallery.html">GALLERY</a>	
+	 | <a href="theteam.html">THE TEAM</a>	
+
+<br>
+<br>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+
+<table width="1000" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc" bgcolor="#ffffff">
+
+  <tr height="50">
+    <td width="100" align="center">
+    <b>Header Files</b>
+    </td>
+
+    <td width="100" align="center">
+    <b>Code Files</b>
+    </td>
+
+    <td width="100" align="center">
+    <b>Pseudocode</b>
+    </td>
+
+    <td width="300" align="center">
+    <b>Description</b>
+    </td>
+
+  <tr>
+    <td align="center" height="30">
+	<a class="inside" href="Code/Main.c"> </a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/MainC.html">Main.c</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/Main.html">Main.html</a>
+    </td>
+
+    <td>
+	Coordinates all the modules to get the FLICKER to work at a high level
+    </td>
+  </tr>
+
+
+  <tr>
+    <td align="center">
+	<a class="inside" href="Code/DownloadH.html">Download.h</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/DownloadC.html">Download.c</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/Download.html">Download.html</a>
+    </td>
+
+    <td>
+<ol>
+<li>Controls the shift register that drives the download LEDs</li>
+<li>Senses the presence of the 3.5inch floppy drive</li>
+<li>Keeps track of the progress of the hypothetical download used in the game</li>
+</ol>
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td align="center">
+	<a class="inside" href="Code/FlickerH.html">Flicker.h</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/FlickerC.html">Flicker.c</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/Flicker.html">Flicker.html</a>
+    </td>
+
+    <td>
+<ol>
+<li>Triggers the next FLICKER</li>
+<li>Receives input to become activated by the previous FLICKER or the Force Start Button</li>
+<li>Controls the White Situation Indicator LEDs (the ultra bright white LEDs in the floor and ceiling)</li>
+<li>Controls the Red Situation Indicator LEDs (red LEDs in the floor and ceiling)</li>
+</ol>
+    </td>
+  </tr>
+
+
+  <tr>
+    <td align="center" height="30">
+	<a class="inside" href="Code/IRH.html">IR.h</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/IRC.html">IR.c</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/IR.html">IR.html</a>
+    </td>
+
+    <td>
+Reads the input signal from the IR phototransistor circuit
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td align="center" height="30">
+	<a class="inside" href="Code/LEDMapH.html">LEDMap.h</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/LEDMapC.html">LEDMap.c</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/LEDMap.html">LEDMap.html</a>
+    </td>
+
+    <td>
+Controls the 15LED Map with a 4-to-16 line decoder
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td align="center" height="30">
+	<a class="inside" href="Code/MusicH.html">Music.h</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/MusicC.html">Music.c</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/Music.html">Music.html</a>
+    </td>
+
+    <td>
+Controls the MP3 player to play music
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td align="center" height="30">
+	<a class="inside" href="Code/Stage_LEDsH.html">Stage_LEDs.h</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/Stage_LEDsC.html">Stage_LEDs.c</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/Stage_LEDs.html">Stage_LEDs.html</a>
+    </td>
+
+    <td>
+Controls the 3 Stage LEDs with a 2-to-4 line decoder
+    </td>
+  </tr>
+
+
+  <tr>
+    <td align="center">
+	<a class="inside" href="Code/StepperMotorH.html">StepperMotor.h</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/StepperMotorC.html">StepperMotor.c</a>
+    </td>
+
+    <td align="center">
+	<a class="inside" href="Code/StepperMotor.html">StepperMotor.html</a>
+    </td>
+
+    <td>
+<ol>
+<li>Reads input from grapple dial to control the stepper motor</li>
+<li>Controls the stepper motor</li>
+<li>Keeps track of the number of steps which determines Tom Cruise's position</li>
+</ol>
+
+
+    </td>
+  </tr>
+
+
+</table>
+<br>
+<br>
+<br>
+</td>
+</tr>
+</table>
+
+</style1>
+
+
+</body>
+
+</html>

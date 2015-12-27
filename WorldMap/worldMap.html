@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+
+<title> World Map </title>
+
+<style type="text/css">
+A:link {color: #003366; text-decoration:none}
+A:visited {color: #336699; text-decoration:none}
+A:active {color: #6699cc; text-decoration:none}
+A:hover {color: #99ccff; text-decoration:none}
+</style>
+
+<style type="text/css">
+body {
+  font-family: verdana; arial, sans-serif;
+  }
+
+#info {padding:2em 0;}
+
+
+#gmap {
+  display:block;
+  width:1000px;
+  height:552px;
+  background:url('photos/worldMapBackground3.jpg') no-repeat 0 0;
+  position:relative;
+  margin:0 auto 2em auto;
+  }
+#gmap a {
+  color:#000;
+  font-family:arial, sans-serif;
+  font-size:1.2;
+  font-weight:none;
+  text-transform:none;
+  }
+
+a#title2, a#title2:visited {
+  display:block;
+  width:1000px;
+  height:0;
+  padding-top:552px;
+  position:absolute;
+  left:0;
+  top:0;
+  cursor:default;
+  text-decoration:none;
+  }
+*html a#title2 {
+  height:552px; he\ight:0;
+  }
+#gmap a#title2:hover {
+  background:transparent url('photos/worldMapBackgroundVisited2.jpg') no-repeat 0 0;
+  overflow:visible;
+  color:#c00;
+  }
+
+a#USA {
+  display:block;
+  width:150px;
+  height:0;
+  padding-top:86px;
+  overflow:hidden;
+  position:absolute;
+  left:161px;
+  top:181px;
+  }
+*html a#USA {
+  height:86px;
+  he\ight:0;
+  }
+a#USA:hover {
+  background:transparent url('photos/USA.gif') no-repeat 0 0;
+  overflow:visible;
+  }
+
+a#Italy {
+  display:block;
+  width:29px;
+  height:0;
+  padding-top:37px;
+  overflow:hidden;
+  position:absolute;
+  left:492px;
+  top:193px;
+    /* absolute positioning of the Italy country*/
+  }
+* html a#Italy {
+  height:37px;
+  he\ight:0;
+  }
+a#Italy:hover {
+  background:transparent url('photos/Italy.gif') no-repeat 0 0;
+  overflow:visible;
+  }
+
+a#China {
+  display:block;
+  width:154px;
+  height:0;
+  padding-top:114px;
+  overflow:hidden;
+  position:absolute;
+  left:660px;
+  top:169px;
+    /* absolute positioning of the country*/
+  }
+* html a#China {
+  height:114px;
+  he\ight:0;
+  }
+a#China:hover {
+  background:transparent url('photos/China.gif') no-repeat 0 0;
+  overflow:visible;
+  }
+
+a#Japan {
+  display:block;
+  width:41px;
+  height:0;
+  padding-top:51px;
+  overflow:hidden;
+  position:absolute;
+  left:799px;
+  top:198px;
+    /* absolute positioning of the country*/
+  }
+* html a#Japan {
+  height:51px;
+  he\ight:0;
+  }
+a#Japan:hover {
+  background:transparent url('photos/Japan.gif') no-repeat 0 0;
+  overflow:visible;
+  }
+
+a#Thailand {
+  display:block;
+  width:20px;
+  height:0;
+  padding-top:46px;
+  overflow:hidden;
+  position:absolute;
+  left:719px;
+  top:283px;
+    /* absolute positioning of the country*/
+  }
+* html a#Thailand {
+  height:46px;
+  he\ight:0;
+  }
+a#Thailand:hover {
+  background:transparent url('photos/Thailand.gif') no-repeat 0 0;
+  overflow:visible;
+  }
+
+a#Cambodia {
+  display:block;
+  width:30px;
+  height:0;
+  padding-top:18px;
+  overflow:hidden;
+  position:absolute;
+  left:728px;
+  top:303px;
+  z-index:20;
+  }
+* html a#Cambodia {
+  height:18px;
+  he\ight:0;
+  }
+a#Cambodia:hover {
+  background:transparent url('photos/Cambodia.gif') no-repeat 0 0;
+  overflow:visible;
+}
+
+
+a#Vietnam {
+  display:block;
+  width:19px;
+  height:0;
+  padding-top:46px;
+  overflow:hidden;
+  position:absolute;
+  left:729px;
+  top:274px;
+    /* absolute positioning of the country*/
+  }
+* html a#Vietnam {
+  height:46px;
+  he\ight:0;
+  }
+a#Vietnam:hover {
+  background:transparent url('photos/Vietnam.gif') no-repeat 0 0;
+  overflow:visible;
+  }
+
+a#Malaysia {
+  display:block;
+  width:46px;
+  height:0;
+  padding-top:18px;
+  overflow:hidden;
+  position:absolute;
+  left:727px;
+  top:326px;
+  /* absolute positioning of the country*/
+  }
+* html a#Malaysia {
+  height:18px;
+  he\ight:0;
+  }
+a#Malaysia:hover {
+  background:transparent url('photos/Malaysia.gif') no-repeat 0 0;
+  overflow:visible;
+  }
+
+
+
+
+
+#gmap a span, #gmap a:visited span {
+  display:none;
+  }
+#gmap a:hover span {
+  position:absolute;
+  width:500px;
+  display:block;
+  font-family:verdana;
+  font-size:12px;
+  background:#fff;
+  color:#000;
+  border:1px solid #000;
+  padding:5px;
+  }
+*html #gmap a:hover span {
+  width:500px; w\idth:500px;
+  }
+#gmap a#USA:hover span {
+  left:-161px;
+  top:371px;
+  }
+#gmap a#Italy:hover span {
+  left:-492px;
+  top:359px;           
+    /* Caption is based on relative positioning to the hover image */
+  }
+#gmap a#China:hover span {
+  left:-660px;
+  top:383px;
+  }
+#gmap a#Japan:hover span {
+  left:-799px;
+  top:354px;
+  }
+#gmap a#Thailand:hover span {
+  left:-719px;
+  top:269px;
+  }
+#gmap a#Cambodia:hover span {
+  left:-728px;
+  top:249px;
+  }
+#gmap a#Vietnam:hover span {
+  left:-729px;
+  top:278px;
+  }
+#gmap a#Malaysia:hover span {
+  left:-727px;
+  top:224px;
+  }
+
+</style>
+
+</head>
+
+
+
+
+
+<body>
+
+<a href="1.html">One</a>
+
+<dl id="gmap">
+<dt><a id="title2" href="#nogo"> </a></dt>
+<dd><a id="USA" title="USA" href="1.html"><span>USA</span></a></dd>
+<dd><a id="Italy" title="Italy" href="2.html"><span>Italy</span></a></dd>
+<dd><a id="China" title="China" href="2.html"><span>China</span></a></dd>
+<dd><a id="Japan" title="Japan" href="2.html"><span>Japan</span></a></dd>
+<dd><a id="Thailand" title="Thailand" href="2.html"><span>Thailand</span></a></dd>
+<dd><a id="Cambodia" title="Cambodia" href="2.html"><span>Cambodia</span></a></dd>
+<dd><a id="Vietnam" title="Vietnam" href="2.html"><span>Vietnam</span></a></dd>
+<dd><a id="Malaysia" title="Malaysia" href="2.html"><span>Malaysia</span></a></dd>
+</dl>
+
+
+
+</body>
+
+</html>
+
+

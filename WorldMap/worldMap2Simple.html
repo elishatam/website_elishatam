@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--http://www.psdgraphics.com/backgrounds/world-map-background/
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+To add a country, you must:
+1) update visited map .jpg (photos/worldMapBackgroundVisited4.jpg). 
+2) Create .gif of country. Delete the background in photoshop to make it transparent.
+3) Copy/Paste a a# section to set the country's .gif image on the map.
+   Change height, padding-top and width to correspond to country's .gif. 
+   Top and Left values correspond to offset from map's top left corner (0,0).
+4) Copy/Paste a gmak# section. Left and Top correspond to offset from the top left corner of country's .gif
+5) Copy/Paste <dd> = id
+
+Here's similar example
+http://green-beast.com/experiments/css_map_pop.php#cmp01
+-->
+
+<html>
+<head>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+-->
+
+<title> World Map </title>
+
+
+
+<style type="text/css">
+/* defines the font size of the caption next to the country*/
+body {
+  font-family: verdana; arial, sans-serif;
+  font-size:0.8em;
+  }
+
+
+/* ************************
+This is the main background world image
+****************************** */
+
+/* #name = id selector to specify a style for a single, unique element
+<a> = tag defines a hyperlink, to link from 1 page to another
+: = pseudo classes give you the ability to apply certain styling rules
+     on specific states of an element
+  
+*/
+#bigImage {
+  display:block; /*block - has some whitespace above and below. All Versions*/
+  width:1000px; /* size of photo image AllV*/
+  height:552px;
+  background:url('photos/worldMapBackground3.jpg') no-repeat; /* AllV*/
+  position:relative;
+  margin:0 0 0 0; /*when values change, pass on to all images, so ok to change */
+  }
+  /*
+#bigImage a {
+  color:#000;
+  font-family:verdana, sans-serif;
+  font-size:1em;
+  font-weight:none;
+  text-transform:none;
+  }*/
+
+
+/* ************************
+This is the map that displays with visited countries
+when hover over the main background image
+****************************** */
+
+a#possibleLinksImage, a#possibleLinksImage:visited {
+  display:block;
+  width:1000px;
+  height:0;
+  padding-top:552px;
+  position:absolute;
+  left:0;
+  top:0;
+  cursor:default;
+  text-decoration:none;
+  }
+
+#bigImage a#possibleLinksImage:hover {
+  background:transparent url('photos/worldMapBackgroundVisited2.jpg') no-repeat 0 0;
+  overflow:visible;
+  color:#c00;
+  }
+
+a#USA {
+  display:block;
+  width:150px;
+  height:0;
+  padding-top:86px;
+  overflow:hidden;
+  position:absolute;
+  left:161px;
+  top:181px;
+  }
+a#USA:hover {
+  background:transparent url('photos/USA.gif') no-repeat 0 0;
+  overflow:visible;
+  }
+
+  /* this shows the Italy country image when hover in the left: top: position */
+a#Italy {
+  display:block;
+  width:29px;
+  height:0;
+  padding-top:37px;
+  overflow:hidden;
+  position:absolute;
+  left:492px;
+  top:220px;
+    /* 193absolute positioning of the Italy country*/
+  }
+a#Italy:hover {
+  background:transparent url('photos/Italy.gif') no-repeat 0 0;
+  overflow:visible;
+  }
+
+a#China {
+  display:block;
+  width:154px;
+  height:0;
+  padding-top:114px;
+  overflow:hidden;
+  position:absolute;
+  left:660px;
+  top:169px;
+    /* absolute positioning of the country*/
+  }
+
+a#China:hover {
+  background:transparent url('photos/China.gif') no-repeat 0 0;
+  overflow:visible;
+  }
+
+
+
+  
+/***************************************************************>
+This is the location of the Country Caption. (0,0) = top left corner of country's gif 
+Somehow, this "span" is creating the properties that will be used in the
+html <span> tags.
+http://www.w3schools.com/css/tryit.asp?filename=trycss_display_block2
+*/
+#bigImage a span, #bigImage a:visited span {
+  display:none;
+  }
+#bigImage a:hover span {
+  position:absolute;
+  width:60px; /*All captions will be the same size */
+  display:block;
+  font-family:verdana;
+  font-size:0.8em;
+  text-align:center;
+  background:#fff;
+  color:#000;
+  border:1px solid #000;
+  padding:5px;
+  }
+
+#bigImage a#USA:hover span {
+  left:10px;
+  top:-30px;
+  /* 552-181=371 */
+  }
+#bigImage a#Italy:hover span {
+  left:35px;
+  top:0px;           
+    /*359 Caption is based on relative positioning to the hover image */
+  }
+#bigImage a#China:hover span {
+  left:35px;
+  top:-20px;
+  /* 383 */
+  }
+
+</style>
+
+</head>
+
+
+
+
+<body>
+
+
+<!-- id can't have spaces.
+<dl> = definition list, with items and descriptions
+<dt> = defines the items in the list
+<dd> = describes the items in the list
+-->
+
+<!--
+<dl id="bigImage">
+<dt><a id="possibleLinksImage" href="#nogo"> </a></dt>
+<dd><a id="USA" href="USACountry.html"><span>USA Today and Tomorrow</span></a></dd>
+<dd><a id="Italy" href="ItalyCountry.html"><span>Italy</span></a></dd>
+<dd><a id="China" href="ChinaCountry.html"><span>China</span></a></dd>
+</dt>
+</dl>
+-->
+
+<ul id="bigImage">
+  <li><a id="possibleLinksImage" href="#nogo"> </a></li>
+  <li><a id="USA" href="USACountry.html"><span>USA Today and Tomorrow</span></a></li>
+  <li><a id="Italy" href="ItalyCountry.html"><span>Italy</span></a></li>
+  <li><a id="China" href="ChinaCountry.html"><span>China</span></a></li>
+</ul>
+<br>
+
+
+
+
+
+</body>
+
+</html>
+
+

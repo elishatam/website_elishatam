@@ -1,0 +1,1441 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="StepperMotorC_files/filelist.xml">
+<title>/***************************************************************************</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>sabrina</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>sabrina</o:LastAuthor>
+  <o:Revision>5</o:Revision>
+  <o:TotalTime>5</o:TotalTime>
+  <o:Created>2009-12-03T03:18:00Z</o:Created>
+  <o:LastSaved>2009-12-03T03:33:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1410</o:Words>
+  <o:Characters>8037</o:Characters>
+  <o:Company>tam</o:Company>
+  <o:Lines>66</o:Lines>
+  <o:Paragraphs>18</o:Paragraphs>
+  <o:CharactersWithSpaces>9429</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DontDisplayPageBoundaries/>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 3 0 0 0 0 0 0 0;
+	mso-font-alt:\65B0\7D30\660E\9AD4;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@PMingLiU";
+	panose-1:2 2 3 0 0 0 0 0 0 0;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:.5in .5in 1.0in .5in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:89857020;
+	mso-list-template-ids:67698719;
+	mso-list-style-name:Recipe;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	color:windowtext;}
+@list l0:level2
+	{mso-level-text:"%1\.%2\.";
+	mso-level-tab-stop:.55in;
+	mso-level-number-position:left;
+	margin-left:.55in;
+	text-indent:-.3in;}
+@list l0:level3
+	{mso-level-text:"%1\.%2\.%3\.";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:.85in;
+	text-indent:-.35in;}
+@list l0:level4
+	{mso-level-text:"%1\.%2\.%3\.%4\.";
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.2in;
+	text-indent:-.45in;}
+@list l0:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.55in;
+	text-indent:-.55in;}
+@list l0:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	margin-left:1.9in;
+	text-indent:-.65in;}
+@list l0:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.75in;}
+@list l0:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:left;
+	margin-left:2.6in;
+	text-indent:-.85in;}
+@list l0:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
+	mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.0in;
+	text-indent:-1.0in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>/***************************************************************************<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>StepperMotor.c</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>****************************************************************************/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>#include &quot;<span
+class=SpellE>StepperMotor.h</span>&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>/*--------------------------
+Module Constants -----------------------------*/<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:3.0in;text-indent:-3.0in'><span
+class=GramE><span style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:
+PMingLiU;mso-fareast-language:ZH-TW'>const</span></span><span style='font-size:
+9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:
+ZH-TW'> static char <span class=SpellE>hardGrapple</span> = 1; <span
+style='mso-tab-count:1'>      </span><span
+style='mso-spacerun:yes'>       </span>//Boolean used to invert the grapple
+control dial to make <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:3.0in;text-indent:-3.0in'><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>                                               
+</span>//the game more difficult<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>const</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> static unsigned <span class=SpellE>int</span> <span
+class=SpellE>dialLO</span> = 15;<span style='mso-tab-count:2'>          </span>//Zero
+position on raw analog input from dial<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>const</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> static unsigned <span class=SpellE>int</span> <span
+class=SpellE>dialHI</span> = 1005;<span style='mso-tab-count:1'> </span><span
+style='mso-spacerun:yes'>       </span>//Max position on raw analog input from
+dial<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>const</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> static unsigned <span class=SpellE>int</span> <span
+class=SpellE>minWait</span> = 2;<span style='mso-spacerun:yes'>        </span><span
+style='mso-tab-count:1'>  </span>//max motor speed<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>const</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> static unsigned <span class=SpellE>int</span> <span
+class=SpellE>maxWait</span> = 10;<span style='mso-spacerun:yes'>      </span><span
+style='mso-tab-count:1'>   </span>//min motor speed<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>const</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> static unsigned <span class=SpellE>int</span> <span
+class=SpellE>resetWait</span> = 5;<span style='mso-spacerun:yes'>      </span><span
+style='mso-tab-count:1'>  </span>//reset motor speed<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:3.5in;text-indent:-3.5in'><span
+class=GramE><span style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:
+PMingLiU;mso-fareast-language:ZH-TW'>const</span></span><span style='font-size:
+9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:
+ZH-TW'> static unsigned <span class=SpellE>int</span> deadZone_pct10 = 30;<span
+style='mso-tab-count:1'>  </span>//Portion of analog dial that reads neutral
+(commands <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:3.5in;text-indent:-3.5in'><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>                                               
+</span>//no motor speed); this must be greater than 25<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>const</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> static unsigned <span class=SpellE>int</span> <span
+class=SpellE>victorySpeed</span> = 15;<span style='mso-tab-count:1'>    </span>//victory
+motor speed<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>const</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> static <span class=SpellE>int</span> <span
+class=SpellE>startPosOffset</span> = 23;<span style='mso-tab-count:1'>    </span>//Start
+position for Tom Cruise<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>const</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> static <span class=SpellE>int</span> <span
+class=SpellE>topRangePos</span> = 593;<span style='mso-tab-count:1'>      </span>//Highest
+position that Tom can begin download<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>const</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> static <span class=SpellE>int</span> <span
+class=SpellE>bottomRangePos</span> = 643;<span style='mso-tab-count:1'>   </span>//Lowest
+position that Tom can begin download<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>const</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> static <span class=SpellE>int</span> <span
+class=SpellE>hitFloorPos</span> = 667;<span style='mso-tab-count:1'>      </span>//Hit
+floor position<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>/*-------------------------
+Module Definitions ----------------------------*/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>#define LOWER_DIR
+0<span style='mso-spacerun:yes'>    </span>//Dir command to stepper motor that
+results in motor rotation that lowers Tom<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>#define RAISE_DIR
+1<span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> 
+</span>//Dir command to stepper motor that results in motor rotation that
+raises Tom<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>/*--------------------------
+Module Variables -----------------------------*/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> <span class=SpellE>int</span> <span class=SpellE>lastCalPt</span>;<span
+style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'>      
+</span>//used only for test function<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> <span class=SpellE>int</span> <span class=SpellE>motorPos</span>;<span
+style='mso-tab-count:3'>              </span>//Motor position (always positive
+with 0 being top)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> char <span class=SpellE>motorDir</span>;<span
+style='mso-tab-count:2'>             </span>//Indicates which direction the
+motor is current set at<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> <span class=SpellE>int</span> <span class=SpellE>motorSpd</span>;<span
+style='mso-tab-count:3'>              </span>//Indicates current speed of the
+motor<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> char <span class=SpellE>waitingForDialNeutral</span>;<span
+style='mso-tab-count:1'> </span>//Indicates if dial started in non neutral
+position<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> unsigned <span class=SpellE>int</span> <span
+class=SpellE>lastClockTime</span>;<span style='mso-spacerun:yes'>  </span><span
+style='mso-tab-count:1'>     </span>//Timing variable for motor speed control<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> unsigned <span class=SpellE>int</span> <span
+class=SpellE>lastMotorPrint</span>;<span style='mso-tab-count:1'>      </span>//Timing
+variable for test function<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>/*--------------------------
+Module Functions -----------------------------*/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> void <span class=SpellE>pulseClock</span>(void);<span
+style='mso-tab-count:1'>     </span>//Pulses the clock line to the stepper
+motor driver<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> <span class=SpellE>int</span> <span class=SpellE>readDial</span>(void);<span
+style='mso-tab-count:2'>        </span>//Reads analog dial as a number between
+0 and 1000<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> void <span class=SpellE>setDir</span>(char);<span
+style='mso-tab-count:2'>         </span>//Sets the direction line to the
+stepper motor driver<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.5in;text-indent:-2.5in'><span
+class=GramE><span style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:
+PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> void <span class=SpellE>runMotor</span>(<span
+class=SpellE>int</span>);<span style='mso-tab-count:1'>        </span>//Runs
+the motor at the given speed (input <span class=SpellE>int</span> is actually
+the <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.5in;text-indent:-2.5in'><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>                                  </span>//wait time,
+so speed = 1<span class=GramE>/(</span>wait time) )<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>/*----------------------------
+Module Code ------------------------------*/<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>void</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> <span class=SpellE>initStepMotor</span>(<span
+class=SpellE>int</span> <span class=SpellE>howManySteps</span>) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>int</span></span>
+<span class=SpellE>dialPos</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>lastClockTime</span></span>
+= TMRS12_GetTime();<span style='mso-tab-count:1'>      </span>//<span
+class=SpellE>Upate</span> timing variables<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>lastMotorPrint</span></span>
+= TMRS12_GetTime();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//Zero out position<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>motorSpd</span></span>
+= 0; <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>motorPos</span></span>
+= 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>setDir</span></span><span
+class=GramE>(</span>RAISE_DIR);<span style='mso-tab-count:4'>                     </span><span
+style='mso-spacerun:yes'>       </span>//Set motor direction to raise Tom
+Cruise<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>while</span> (<span
+class=SpellE>motorPos</span> &gt; (-1)*(<span class=SpellE>howManySteps</span>))
+{<span style='mso-tab-count:1'>      </span>//Run motor into stop for a
+specified # of steps<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>     </span><span class=SpellE><span class=GramE>runMotor</span></span><span
+class=GramE>(</span><span class=SpellE>resetWait</span>);<span
+style='mso-tab-count:4'>                       </span>//Run motor at a
+calibrated reset speed<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>motorPos</span></span>
+= 0;<span style='mso-tab-count:5'>                                 </span>//Reset
+zero position<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//Move to calibrated start position<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>setDir</span></span><span
+class=GramE>(</span>LOWER_DIR);<span style='mso-tab-count:4'>                     </span><span
+style='mso-spacerun:yes'>       </span>//Set motor direction to lower Tom
+Cruise<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>while</span> (<span
+class=SpellE>motorPos</span> != <span class=SpellE>startPosOffset</span>) {<span
+style='mso-tab-count:2'>          </span>//Continue lowering him until he is at
+the start <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>     </span><span class=SpellE><span class=GramE>runMotor</span></span><span
+class=GramE>(</span><span class=SpellE>resetWait</span>);<span
+style='mso-tab-count:4'>                       </span>//position<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>motorPos</span></span>
+= 0;<span style='mso-tab-count:5'>                                 </span>//Reset
+zero position<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//Check if dial is not in neutral<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>dialPos</span></span>
+= <span class=SpellE>readDial</span>();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>if</span> ((<span
+class=SpellE>dialPos</span> &gt; (500 + deadZone_pct10 - 5)) || (<span
+class=SpellE>dialPos</span> &lt; (500 - deadZone_pct10 + 5))) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.5in;text-indent:-2.5in'><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'><span style='mso-spacerun:yes'>     </span><span
+class=SpellE><span class=GramE>waitingForDialNeutral</span></span> = 1;<span
+style='mso-tab-count:1'>   </span>//Dial not in neutral position, make note to
+ignore dial input <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.5in;text-indent:-2.5in'><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>                               </span><span
+style='mso-spacerun:yes'>   </span>//until it passes through neutral position<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>} <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>else</span> {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>     </span><span class=SpellE><span class=GramE>waitingForDialNeutral</span></span>
+= 0;<span style='mso-tab-count:1'>   </span>//Dial is ready to go<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//testing only<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>lastCalPt</span></span>
+= -1;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>MOTOR_STATUS_t</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> <span class=SpellE><span class=GramE>resetStepMotorStatus</span></span><span
+class=GramE>(</span>void) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>if</span> (<span
+class=SpellE>motorPos</span> &lt;= 0) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>return</span> MOTOR_NOT_IN_RANGE_STATUS;
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>else</span> {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>setDir</span></span><span
+class=GramE>(</span>RAISE_DIR);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>runMotor</span></span><span
+class=GramE>(</span><span class=SpellE>resetWait</span>);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>return</span>
+MOTOR_RESETTING_STATUS; <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>MOTOR_STATUS_t</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> <span class=SpellE><span class=GramE>slowVictoryReset</span></span><span
+class=GramE>(</span>void) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>if</span> (<span
+class=SpellE>motorPos</span> &lt;= 0) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>return</span>
+MOTOR_NOT_IN_RANGE_STATUS ;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>else</span> {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>setDir</span></span><span
+class=GramE>(</span>RAISE_DIR);<span style='mso-spacerun:yes'>    </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>runMotor</span></span><span
+class=GramE>(</span><span class=SpellE>victorySpeed</span>);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>return</span>
+MOTOR_RESETTING_STATUS;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>MOTOR_STATUS_t</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> <span class=SpellE><span class=GramE>checkStepMotorStatus</span></span><span
+class=GramE>(</span>void) {<span style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>int</span></span>
+<span class=SpellE>dialPos</span> = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>int</span></span>
+<span class=SpellE>relativeDialPos</span> = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>int</span></span>
+<span class=SpellE>cmdWaitTime</span> = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>unsigned</span> long <span
+class=SpellE>myTemp</span> = 0;<span style='mso-tab-count:1'> </span><span
+style='mso-spacerun:yes'>  </span>//Use to avoid floating-point math<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//Read in analog dial<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>dialPos</span></span>
+= <span class=SpellE>readDial</span>();<span style='mso-tab-count:1'>    </span><span
+style='mso-spacerun:yes'>  </span>//Will return a number between 0 and 1000 <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>// <span class=GramE>Determine</span>
+commanded direction and speed<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>if</span> (<span
+class=SpellE>dialPos</span> &lt; (500 - deadZone_pct10)){<span
+style='mso-spacerun:yes'>       </span>//Check if dial is above the neutral (<span
+class=SpellE>aka</span> dead) zone<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span>//Raise grapple<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>setDir</span></span><span
+class=GramE>(</span>LOWER_DIR);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>if</span> (<span
+class=SpellE>hardGrapple</span>) <span style='mso-tab-count:1'>      </span><span
+style='mso-spacerun:yes'>                   </span>//Interpret dial commands
+“backwards” if hard grapple is activated<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>relativeDialPos</span></span>
+= <span class=SpellE>dialPos</span> + 1;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>else</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>relativeDialPos</span></span>
+= (500 - deadZone_pct10) - <span class=SpellE>dialPos</span>;<span
+style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>} <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>else</span> {<span
+style='mso-spacerun:yes'>    </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>if</span> (<span
+class=SpellE>dialPos</span> &gt; (500 + deadZone_pct10)){<span
+style='mso-tab-count:1'>      </span>//Check if dial is below the neutral (<span
+class=SpellE>aka</span> dead) zone<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span>//Lower grapple<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>setDir</span></span><span
+class=GramE>(</span>RAISE_DIR);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>if</span> (<span
+class=SpellE>hardGrapple</span>)<span style='mso-tab-count:1'>     </span><span
+style='mso-spacerun:yes'>                    </span>//Interpret dial commands
+“backwards” if hard grapple is activated<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>        </span><span class=SpellE><span class=GramE>relativeDialPos</span></span>
+= 1001 - <span class=SpellE>dialPos</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>else</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>        </span><span class=SpellE><span class=GramE>relativeDialPos</span></span>
+= <span class=SpellE>dialPos</span> - (500 + deadZone_pct10);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span>} <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>else</span> {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>relativeDialPos</span></span>
+= 0;<span style='mso-tab-count:1'> </span><span
+style='mso-spacerun:yes'>                   </span>//If dial is in neutral (<span
+class=SpellE>aka</span> dead) zone, don’t command any speed<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//Need to get a neutral reading before
+allowing dial to control grapple (this prevents the<span
+style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//grapple from running before the user has
+ever touched the dial)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>if</span> (<span
+class=SpellE>waitingForDialNeutral</span>) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span>//Check if dial is in neutral (<span
+class=SpellE>aka</span> dead) zone plus some <span class=SpellE>hysteresis</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>if</span> ((<span
+class=SpellE>dialPos</span> &gt; (500 + deadZone_pct10 - 25)) || (<span
+class=SpellE>dialPos</span> &lt; (500 - deadZone_pct10 + 25)))<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>relativeDialPos</span></span>
+= 0; //cancel dial command until neutral is found<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>else</span><span
+style='mso-spacerun:yes'>      </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>waitingForDialNeutral</span></span>
+= 0;<span style='mso-spacerun:yes'>     </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//Calculate speed (which is actually
+commanded by wait time); commanded wait time will be <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//something between the calibrated max and
+min wait times (corresponding to the min and max <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//speeds of the motor)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>myTemp</span></span>
+= ((long)<span class=SpellE>maxWait-minWait</span>)*(<span class=SpellE>relativeDialPos</span>);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>cmdWaitTime</span></span>
+= <span class=SpellE>maxWait</span> - (<span class=SpellE>int</span>)(<span
+class=SpellE>myTemp</span>/(500 - deadZone_pct10));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//Before commanding motor, check limits;
+don’t allow motor to go up passed zero position, or <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//lower than the floor<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>if<span
+style='mso-spacerun:yes'>  </span>(</span>((<span class=SpellE>motorDir</span>
+== RAISE_DIR) &amp;&amp; (<span class=SpellE>motorPos</span> &gt; 0)) || <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span>((<span class=SpellE>motorDir</span> ==
+LOWER_DIR) &amp;&amp; (<span class=SpellE>motorPos</span> &lt; <span
+class=SpellE>hitFloorPos</span>))) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>if</span> (<span
+class=SpellE>relativeDialPos</span> != 0) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>runMotor</span></span><span
+class=GramE>(</span><span class=SpellE>cmdWaitTime</span>);<span
+style='mso-tab-count:1'>      </span>//Command motor to be run at specified
+speed = 1/cmdWaitTime<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//Check current motor position to determine
+if an event has <span class=SpellE>occured</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>if</span> (<span
+class=SpellE>motorPos</span> &gt;= <span class=SpellE>hitFloorPos</span>) { <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>return</span>
+MOTOR_HIT_FLOOR_STATUS;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>else</span> {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>if</span> ((<span
+class=SpellE>motorPos</span> &gt;= <span class=SpellE>topRangePos</span>)
+&amp;&amp; (<span class=SpellE>motorPos</span> &lt;= <span class=SpellE>bottomRangePos</span>))<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>return</span>
+MOTOR_IN_RANGE_STATUS;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>else</span> {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>return <span
+style='mso-spacerun:yes'> </span>MOTOR</span>_NOT_IN_RANGE_STATUS;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> void <span class=SpellE>runMotor</span>(<span
+class=SpellE>int</span> <span class=SpellE>cmdWaitTime</span>) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>   </span><span class=GramE>unsigned</span> <span
+class=SpellE>int</span> <span class=SpellE>myTime</span> = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>   </span><span class=SpellE><span class=GramE>int</span></span>
+<span class=SpellE>filteredWaitTime</span> = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>   </span>//Filter input speed to prevent <span
+class=SpellE>instananous</span> accelerations of the stepper motor<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>   </span><span class=SpellE><span class=GramE>filteredWaitTime</span></span>
+= <span class=SpellE>motorSpd</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>   </span><span class=GramE>if</span> (<span
+class=SpellE>cmdWaitTime</span> &lt; <span class=SpellE>motorSpd</span>)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>     </span><span class=SpellE><span class=GramE>filteredWaitTime</span></span>
+= <span class=SpellE>motorSpd</span> - 1;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>   </span><span class=GramE>if</span> (<span
+class=SpellE>cmdWaitTime</span> &gt; <span class=SpellE>motorSpd</span>)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>     </span><span class=SpellE><span class=GramE>filteredWaitTime</span></span>
+= <span class=SpellE>motorSpd</span> + 1;<span style='mso-spacerun:yes'> 
+</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>        </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>   </span><span class=SpellE><span class=GramE>myTime</span></span>
+= TMRS12_GetTime();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>if</span> ((<span
+class=SpellE>myTime-lastClockTime</span>) &gt;= <span class=SpellE>filteredWaitTime</span>)
+{<span style='mso-spacerun:yes'>  </span>//If enough time has passed, command a
+step<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>pulseClock</span></span><span
+class=GramE>(</span>);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>motorSpd</span></span>
+= <span class=SpellE>filteredWaitTime</span>;<span style='mso-tab-count:3'>              </span><span
+style='mso-spacerun:yes'>       </span>//Save current speed for future
+filtering<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>lastClockTime</span></span>
+= <span class=SpellE>myTime</span>;<span style='mso-tab-count:4'>                          </span>//Update
+timing variables<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>if</span> (<span
+class=SpellE>motorDir</span> == LOWER_DIR)<span style='mso-tab-count:4'>                       </span>//Update
+motor position<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>        </span><span class=SpellE><span class=GramE>motorPos</span></span>++;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>else</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>        </span><span class=SpellE><span class=GramE>motorPos</span></span><span
+class=GramE>--</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> <span class=SpellE>int</span> <span class=SpellE>readDial</span>(void)
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>int</span></span>
+<span class=SpellE>myPos</span> = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>unsigned long <span class=SpellE>myTemp</span>
+= 0; <span style='mso-tab-count:1'>      </span>//Used to avoid floating point
+math<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>int</span></span>
+<span class=SpellE>myCalc</span> = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>myPos</span></span>
+=<span style='mso-spacerun:yes'>  </span>ADS12_ReadADPin(0);<span
+style='mso-tab-count:1'>    </span>//Read in analog dial as number between 0 and
+1023<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>if</span> (<span
+class=SpellE>myPos</span> &lt;= <span class=SpellE>dialLO</span>)<span
+style='mso-tab-count:2'>            </span>//Check against calibrated zero
+position on dial<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>return</span> 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>else</span> {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>if</span> (<span
+class=SpellE>myPos</span> &gt;= <span class=SpellE>dialHI</span>)<span
+style='mso-tab-count:2'>          </span>//Check against calibrated fully on
+position on dial<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>return</span> 1000;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>else</span> {<span
+style='mso-tab-count:4'>                        </span>//<span class=SpellE>Linearize</span>
+between the two extreme calibrations<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>myTemp</span></span>
+= (1000*((long)<span class=SpellE>myPos-dialLO</span>));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=SpellE><span class=GramE>myCalc</span></span>
+= (<span class=SpellE>int</span>)((<span class=SpellE>myTemp</span>)/((<span
+class=SpellE>dialHI-dialLO</span>)));<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>return</span> <span
+class=SpellE>myCalc</span>; <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> void <span class=SpellE>setDir</span>(char dir) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>motorDir</span></span>
+= dir;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>if</span> (dir) <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span>PTAD = PTAD | BIT2HI;<span
+style='mso-tab-count:1'>  </span>//Set stepper motor driver direction line to
+HI<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>else</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span>PTAD = PTAD &amp; BIT2LO;<span
+style='mso-tab-count:1'>  </span>//Set stepper motor driver direction line to
+LO<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>static</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> void <span class=SpellE>pulseClock</span>(void) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>int</span></span>
+j = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>PTAD = PTAD | BIT1HI; <span style='mso-tab-count:
+1'>   </span>//Set step command line to HI<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>//delay slightly to ensure CLOCK output stays
+HI for &gt; 10[us]<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>for</span> (j=1; j&lt;200;
+j++) { <span style='mso-tab-count:1'> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>PTAD = PTAD &amp; BIT1LO;<span
+style='mso-tab-count:1'>    </span>//Set step command line to LO<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>//test function<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>void</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> <span class=SpellE>calibrateDial</span>(void) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>int</span></span>
+<span class=SpellE>myPos</span> = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>myPos</span></span>
+= <span class=SpellE>readDial</span>();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>if</span> (<span
+class=SpellE>myPos</span> != <span class=SpellE>lastCalPt</span>) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>lastCalPt</span></span>
+= <span class=SpellE>myPos</span>; <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>printf</span></span><span
+class=GramE>(</span>&quot;Dial: %d\r\n&quot;, <span class=SpellE>myPos</span>);
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>//test function<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:9.0pt;font-family:
+"Courier New";mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>void</span></span><span
+style='font-size:9.0pt;font-family:"Courier New";mso-fareast-font-family:PMingLiU;
+mso-fareast-language:ZH-TW'> <span class=SpellE>showMotorPos</span>(void) {<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>unsigned</span> <span
+class=SpellE>int</span> <span class=SpellE>curTime</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=SpellE><span class=GramE>curTime</span></span>
+= TMRS12_GetTime();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span><span class=GramE>if</span> (<span
+class=SpellE>curTime</span> &gt; (<span class=SpellE>lastMotorPrint</span> +
+500)){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>lastMotorPrint</span></span>
+= <span class=SpellE>curTime</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>    </span><span class=SpellE><span class=GramE>printf</span></span><span
+class=GramE>(</span>&quot;<span class=SpellE>MotorPos</span>: %d\r\n&quot;, <span
+class=SpellE>motorPos</span>);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'><span
+style='mso-spacerun:yes'>  </span>}<span
+style='mso-spacerun:yes'>                </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:PMingLiU;mso-fareast-language:ZH-TW'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

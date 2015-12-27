@@ -1,0 +1,424 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="VoltageCalc_files/filelist.xml">
+<link rel=Edit-Time-Data href="VoltageCalc_files/editdata.mso">
+<link rel=OLE-Object-Data href="VoltageCalc_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Voltage Regulator Current</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>sabrina</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>sabrina</o:LastAuthor>
+  <o:Revision>4</o:Revision>
+  <o:TotalTime>9</o:TotalTime>
+  <o:Created>2010-03-10T19:31:00Z</o:Created>
+  <o:LastSaved>2010-03-10T19:40:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>168</o:Words>
+  <o:Characters>962</o:Characters>
+  <o:Lines>8</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1128</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>95</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:11.0in 8.5in;
+	mso-page-orientation:landscape;
+	margin:.5in .5in .5in .5in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="3074"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><a name="_Toc255810263"><i><span
+style='font-family:"Times New Roman";mso-bidi-font-family:Arial'>Voltage
+Regulator Current</span></i></a><i><span style='font-family:"Times New Roman";
+mso-bidi-font-family:Arial'><o:p></o:p></span></i></h3>
+
+<p class=MsoNormal>Calculate I sourced by the voltage regulator LM7805C for all
+5V loads</p>
+
+<p class=MsoNormal>The voltage regulator can source a max of 1A. We are using a
+total of <span style='background:silver;mso-highlight:silver'>0.308mA</span>.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1042" type="#_x0000_t75" style='position:absolute;
+ margin-left:405.6pt;margin-top:2.45pt;width:210.6pt;height:160.15pt;z-index:2'>
+ <v:imagedata src="VoltageCalc_files/image027.emz" o:title="" cropright="-8716f"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:2;margin-left:541px;margin-top:3px;width:281px;height:214px'><img
+width=281 height=214 src="VoltageCalc_files/image002.gif" v:shapes="_x0000_s1042"></span><![endif]><b
+style='mso-bidi-font-weight:normal'><u>Servo<o:p></o:p></u></b></p>
+
+<p class=MsoNormal><u><o:p><span style='text-decoration:none'>&nbsp;</span></o:p></u></p>
+
+<p class=MsoNormal>We placed a low resistor in series with the running servo
+and scoped the <span class=SpellE>V<sub>peak</sub></span><sub>-to-peak­</sub>.</p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1025" type="#_x0000_t75"
+ style='width:51.75pt;height:30.75pt' o:ole="">
+ <v:imagedata src="VoltageCalc_files/image028.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=69 height=41
+src="VoltageCalc_files/image004.gif" v:shapes="_x0000_i1025"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1329726498">
+ </o:OLEObject>
+</xml><![endif]-->= <span style='background:silver;mso-highlight:silver'>14mA</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1041" type="#_x0000_t75"
+ style='position:absolute;margin-left:336.6pt;margin-top:3.25pt;width:378pt;
+ height:234.25pt;z-index:1' o:allowoverlap="f">
+ <v:imagedata src="VoltageCalc_files/image029.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:1;margin-left:449px;margin-top:5px;width:504px;height:312px'><img
+width=504 height=312 src="VoltageCalc_files/image006.gif" v:shapes="_x0000_s1041"></span><![endif]><b
+style='mso-bidi-font-weight:normal'><u>7 Tape Sensors</u><o:p></o:p></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The diode is always on. <span class=SpellE><span
+class=GramE>V<sub>f</sub></span></span> = 1.70V (from datasheet)</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:108.75pt;height:30.75pt'
+ o:ole="">
+ <v:imagedata src="VoltageCalc_files/image030.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=145 height=41
+src="VoltageCalc_files/image008.gif" v:shapes="_x0000_i1026"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1026"
+  DrawAspect="Content" ObjectID="_1329726499">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal>Scoped the I through the 10K resistor = 0.4mA</p>
+
+<p class=MsoNormal>I through the voltage divider</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:87pt;height:30.75pt' o:ole="">
+ <v:imagedata src="VoltageCalc_files/image031.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=116 height=41
+src="VoltageCalc_files/image010.gif" v:shapes="_x0000_i1027"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1027"
+  DrawAspect="Content" ObjectID="_1329726500">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal>Supply current thru the LM324 = 3mA (datasheet)</p>
+
+<p class=MsoNormal>BJT <span class=SpellE>onstate</span> collector current =
+3mA (datasheet)</p>
+
+<p class=MsoNormal><span class=SpellE>I<sub>total</sub></span> = 7(33mA + 3mA
++3mA + 0.4mA) + 2.5mA = <span style='background:silver;mso-highlight:silver'>278.3mA
+for 7 tape sensors</span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><span class=SpellE><b style='mso-bidi-font-weight:normal'><u>LEDs</u></b></span><b
+style='mso-bidi-font-weight:normal'><u><o:p></o:p></u></b></p>
+
+<p class=MsoNormal>Arm board yellow debug LED</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='text-indent:.5in'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:53.25pt;height:30.75pt'
+ o:ole="">
+ <v:imagedata src="VoltageCalc_files/image033.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=71 height=41
+src="VoltageCalc_files/image014.gif" v:shapes="_x0000_i1028"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1028"
+  DrawAspect="Content" ObjectID="_1329726501">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>  </span>= <span
+style='background:silver;mso-highlight:silver'>1.4mA</span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1043" type="#_x0000_t75"
+ style='position:absolute;margin-left:325.7pt;margin-top:3.75pt;width:70.4pt;
+ height:140.05pt;z-index:3'>
+ <v:imagedata src="VoltageCalc_files/image032.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:3;margin-left:434px;margin-top:5px;width:94px;height:187px'><img
+width=94 height=187 src="VoltageCalc_files/image012.gif" v:shapes="_x0000_s1043"></span><![endif]>Main
+E128 board <span class=GramE>red debug</span> LED</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:53.25pt;height:30.75pt'
+ o:ole="">
+ <v:imagedata src="VoltageCalc_files/image034.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=71 height=41
+src="VoltageCalc_files/image014.gif" v:shapes="_x0000_i1029"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1029"
+  DrawAspect="Content" ObjectID="_1329726502">
+ </o:OLEObject>
+</xml><![endif]-->= <span style='background:silver;mso-highlight:silver'>1.4mA</span></p>
+
+<p class=MsoNormal>Power <span class=GramE>board red debug</span> LED</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1030" type="#_x0000_t75" style='width:51.75pt;height:30.75pt'
+ o:ole="">
+ <v:imagedata src="VoltageCalc_files/image035.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=69 height=41
+src="VoltageCalc_files/image017.gif" v:shapes="_x0000_i1030"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1030"
+  DrawAspect="Content" ObjectID="_1329726503">
+ </o:OLEObject>
+</xml><![endif]-->= <span style='background:silver;mso-highlight:silver'>0.14mA</span></p>
+
+<p class=MsoNormal>Power <span class=GramE>board green debug</span> LED</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1031" type="#_x0000_t75" style='width:51.75pt;height:30.75pt'
+ o:ole="">
+ <v:imagedata src="VoltageCalc_files/image036.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=69 height=41
+src="VoltageCalc_files/image019.gif" v:shapes="_x0000_i1031"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1031"
+  DrawAspect="Content" ObjectID="_1329726504">
+ </o:OLEObject>
+</xml><![endif]-->= <span style='background:silver;mso-highlight:silver'>0.096mA</span></p>
+
+<p class=MsoNormal>Red Indicator LED</p>
+
+<p class=MsoNormal style='text-indent:.5in'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1032" type="#_x0000_t75" style='width:51pt;height:30.75pt' o:ole="">
+ <v:imagedata src="VoltageCalc_files/image037.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=68 height=41
+src="VoltageCalc_files/image021.gif" v:shapes="_x0000_i1032"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1032"
+  DrawAspect="Content" ObjectID="_1329726505">
+ </o:OLEObject>
+</xml><![endif]-->= <span style='background:silver;mso-highlight:silver'>6.46mA</span></p>
+
+<p class=MsoNormal>Green Indicator LED</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.5in'><span
+style='mso-tab-count:1'>            </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1033" type="#_x0000_t75" style='width:51pt;height:30.75pt' o:ole="">
+ <v:imagedata src="VoltageCalc_files/image038.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=68 height=41
+src="VoltageCalc_files/image021.gif" v:shapes="_x0000_i1033"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1033"
+  DrawAspect="Content" ObjectID="_1329726506">
+ </o:OLEObject>
+</xml><![endif]-->= <span style='background:silver;mso-highlight:silver'>6.46mA</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u><o:p><span
+ style='text-decoration:none'>&nbsp;</span></o:p></u></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><u>Bumper Limit
+Switch<o:p></o:p></u></b></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1136" type="#_x0000_t75"
+ style='position:absolute;margin-left:330.25pt;margin-top:1.05pt;width:174.05pt;
+ height:132.15pt;z-index:4'>
+ <v:imagedata src="VoltageCalc_files/image039.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:4;margin-left:440px;margin-top:2px;width:232px;height:176px'><img
+width=232 height=176 src="VoltageCalc_files/image024.gif" v:shapes="_x0000_s1136"></span><![endif]><span
+style='mso-tab-count:1'>            </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1034" type="#_x0000_t75" style='width:102.75pt;height:30.75pt'
+ o:ole="">
+ <v:imagedata src="VoltageCalc_files/image040.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=137 height=41
+src="VoltageCalc_files/image026.gif" v:shapes="_x0000_i1034"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1034"
+  DrawAspect="Content" ObjectID="_1329726507">
+ </o:OLEObject>
+</xml><![endif]--></p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span>0.05mA * 2
+= <span style='background:silver;mso-highlight:silver'>0.1mA</span> for 2
+bumper limit switches</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>            </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

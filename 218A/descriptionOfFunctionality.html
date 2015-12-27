@@ -1,0 +1,216 @@
+<html>
+<head>
+
+<title> Stanford ME 218A Final Project, Fall 2009</title>
+
+<link rel="stylesheet" type="text/css" href="mystyles.css">
+
+
+</head>
+
+<body>
+<style1>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc">
+
+  <tr>
+    <td align="left" colspan=3>
+	<img src="photos/HeadingRIFireBlack.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td colspan=3>
+	<hr>
+    </td>
+
+  </tr>
+
+  <tr>
+    <td align="center" font size="0.9em" colspan=3>
+	<a href="index.html">MISSION</a>
+	 | <a href="hardware.html">HARDWARE</a>	
+	 | <a href="software.html">SOFTWARE</a>	
+	 | <a href="gallery.html">GALLERY</a>	
+	 | <a href="theteam.html">THE TEAM</a>	
+
+<br>
+<br>
+    </td>
+  </tr>
+
+  <tr>
+    <td valign="top" width="120">
+	<a class="inside" href="index.html">Play Game</a>
+<br><br>
+        <a class="inside" href="descriptionOfFunctionality.html">Description of Functionality</a>
+
+<br><br>
+        <a class="inside" href="projectRequirements.html">Project Requirements</a>
+
+    </td>
+
+
+    <td valign="top" width="600">
+
+	<img src="photos/FlickerFront2.jpg" width="600">
+	<br>
+	<br>
+    </td>
+
+    <td>
+<b><u>REQUIREMENTS:</u></b>
+<br><b>3 Distinct User Interactions:</b>
+<ol>
+  <li>Break IR beam
+  <li>Lower Tom Cruise down
+  <li>Insert and eject disk to download the file
+</ol>
+
+<b>Display of the Passage of Time:</b>
+<br>CIA Analyst time map
+<br>
+<br>
+<b>Force Start Button:</b>
+<br>The directions indicate that this button should be placed on the left hand side of the FLICKER. However, given our structural design in the back, we asked the TA if we could place our Force Start Button on the right hand side.
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td colspan ="2">
+<br>
+<br>
+	<b><u>GAME PLAY</u></b>
+	<ul>
+	  <li>Start the game</li>
+	    <ol>
+	      <li>The previous FLICKER finishes and triggers our FLICKER or...</li>
+	      <li>Press the Force Start button.</li>
+	    </ol>
+	  <li>Task 1: IR beam</li>
+	    <ul>
+	      <li>Disable the security system so that Tom Cruise can grapple down to the computer and download the file.</li>
+	      <li>Use a finger to block the correct IR beam between an IR emitter LED and a phototransistor.</li>
+	    </ul>
+	  <li>Task 2: Grapple</li>
+	    <ul>
+	      <li>Get in range of the computer.</li>
+	      <li>Turn the potentiometer dial clockwise or counterclockwise to raise or lower Tom Cruise within reach of the computer.</li> 
+	      <li>You must lower him right in front of the computer and avoid touching the floor. Otherwise you trip the alarm.</li>
+	    </ul>
+	  <li>Task 3: Download</li>
+	    <ul>
+	      <li>Download the list of NOC agents from the computer.</li>
+	      <li>Insert the floppy disk into the disk drive and wait for the file to download. Once the file completes downloading, press the button below the disk drive to eject the disk.</li>
+	     </ul>
+	  <li>Alarm</li>
+	    <ul>
+	      <li>If Tom Cruise is lowered too far and hits the floor, the alarm will be triggered and the CIA analyst will run to the room.</li>
+	      <li>The LED map will blink faster and there will be less time to complete the mission.</li>
+	    </ul>
+	  <li>Success</li>
+	    <ul>
+	      <li>If the user completes all three tasks before the CIA analyst returns from the bathroom (before the final LED in the time map finishes blinking), the user wins!</li>
+	    </ul>
+	  <li>Fail</li>
+	    <ul>
+	      <li>If the user does not complete all three tasks before time runs out, the user fails!</li>
+	    </ul>
+	</ul>
+	
+
+<br>
+<br>
+<br>
+
+<b><u>DESCRIPTION OF FUNCTIONS</u></b>
+<br>
+<b>SENSORS</b>
+  <ul>
+    <li>IR Beam (Non-Contact): There are multiple IR LED emitter and IR phototransistor pairs in the "air duct". Only one pair is the correct beam that must be deactivated while the fakes are planted to mislead the user. When the correct beam is blocked or unblocked, the trans-resistive circuit sends a low or high signal to the C32.
+<br>
+<img src="photos/IR.jpg" width="500">
+<br>
+</li>
+<br>
+<br>
+    <li>Grapple dial (Analog): A potentiometer dial is used to create a voltage divider circuit to input an analog signal to the C32 microcontroller. The C32 then interprets the analog signal to adjust the speed and direction of the stepper motor which controls Tom Cruise's position. When the dial is at the center line, Tom Cruise is stationary. Turning the dial counterclockwise lowers Tom Cruise. Turning the dial clockwise raises him. Using software, we calibrated Tom Cruise's speed to speed up or slow down depending on how far the dial is turned.
+<br>
+<img src="photos/dial.jpg">
+</li>
+<br>
+    <li>Disk download (Other): A Single-Pole, Single-Throw push button is placed in the back of the disk drive. When the disk is inserted and ejected, the disk carriage is lowered and raised. This depresses or presses the button and sends a high or low voltage signal to the C32.
+<br>
+<img src="photos/disk.jpg"></li>
+  </ul>
+<br>
+
+<b>INDICATORS</b>
+  <ul>
+     <li>Start the game</li>
+     <li>Task 1: IR beam</li>
+	<ul>
+	  <li>Theme music begins</li>
+	  <li>CIA Analyst LED time map begins to blink on and off once a second. The LED increments once every 3 seconds.</li>
+	  <li>The red Situation Indicator LEDs are on to indicate that the security system is activated.</li>
+	  <li>The IR Beam Stage Indicator LED is on.
+	</ul>
+     <li>Task 2: Grapple</li>
+	<ul>
+	  <li>The white Situation Indicator LEDs are on to indicate that the security system is deactivated.</li>
+	  <li>The IR Beam Stage Indicator LED turns off, and the Grapple Stage Indicator LED is on.</li>
+	  <li>When Tom Cruise is in reach of the computer, the Download LEDs flash to indicate it is ready to download.</li>
+	</ul>
+     <li>Task 3: Download</li>
+	<ul>
+	  <li>When the disk is inserted, the Grapple Stage Indicator LED turns off, and the Download Stage Indicator LED is on.</li>
+	  <li>Download LEDs begin to turn on from left to right. After 1 second, the following light turns on.</li>
+	</ul>
+     <li>Alarm</li>
+	<ul>
+	  <li>White and Red Situation Indicator LEDs alternate flashing.</li>
+	  <li>CIA Analyst LED time map flashes 3 times as fast and increments to the next LED 3 times as fast</li>
+	</ul>
+     <li>Success</li>
+	<ul>
+	  <li>Tom Cruise is raised up to starting position.</li>
+	  <li>White Situation Indicator LEDs flash for 8 seconds.</li>
+	  <li>Music restarts from the beginning of the theme track and plays for 8 seconds.</li>
+	  <li>All other LEDs turn off.</li>
+	</ul>
+     <li>Fail</li>
+	<ul>
+	  <li>Tom Cruise is raised up to starting position.</li>
+	  <li>Red Situation Indicator LEDs flash for 3 seconds.</li>
+	  <li>Music turns off.</li>
+	  <li>All other LEDs turn off.</li>
+	</ul>
+  </ul>
+<br>
+<b>ACTUATORS</b>
+  <ul>
+     <li>Stepper Motor</li>
+	<ul>
+	  <li>We used a stepper motor to raise and lower Tom Cruise.</li>
+	  <li>For his speed, we used software to pulse the stepper motor at a certain rate depending on how far the dial had been turned.</li>
+	  <li>For his position, we used software to control direction and calculated the number of steps we had already sent to the motor.</li>
+	</ul>
+     <li>MP3 Player</li>
+	<ul>
+	  <li>Music is controlled by the buttons on an MP3 player. Each button is driven by a MOSFET that acts as an electrical replacement for the mechanical button.
+	</ul>
+  </ul>
+
+
+	
+    </td>
+
+
+
+  </tr>
+
+</style1>
+
+
+</body>
+
+</html>

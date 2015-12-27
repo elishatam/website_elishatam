@@ -1,0 +1,350 @@
+<html>
+<head>
+
+<title> Stanford ME 218B Final Project, Winter 2010</title>
+
+<link rel="stylesheet" type="text/css" href="mystyles.css">
+
+
+</head>
+
+<body>
+<style1>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc">
+
+  <tr>
+    <td align="left" colspan=4>
+	<img src="photos/HeadingFirefox.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td colspan=4>
+	<hr>
+    </td>
+
+  </tr>
+
+  <tr>
+    <td align="center" font size="0.9em" colspan=4>
+	<a href="index.html">OVERVIEW</a>
+	 | <a href="hardware.html">HARDWARE</a>	
+	 | <a href="software.html">SOFTWARE</a>	
+	 | <a href="gallery.html">GALLERY</a>	
+	 | <a href="theteam.html">THE TEAM</a>	
+
+<br>
+<br>
+    </td>
+  </tr>
+
+  <tr>
+    <td valign="top" width="180">
+	<a href="hardware.html">Solidworks & Photos</a>
+<br><br>
+        <a href="circuits.html">Circuit Designs</a>
+		<br>
+		<a href="#Power">&nbsp;&nbsp;&nbsp;Power Board</a>
+		<br>
+		<a href="#Main">&nbsp;&nbsp;&nbsp;Main Board</a>
+ 		<br>
+		<a href="#Arm">&nbsp;&nbsp;&nbsp;Arm Board</a>
+		<br>
+		<a href="#Tape">&nbsp;&nbsp;&nbsp;Tape Sensor Board</a>
+		<br>
+		<a href="#IR">&nbsp;&nbsp;&nbsp;IR Sensor</a>
+		<br>
+		<a href="#Datasheets">&nbsp;&nbsp;&nbsp;Datasheets</a>
+		<br><br>
+		<a href="BOM.html">Bill of Materials</a>
+    </td>
+
+    <td width="30">
+    </td>
+	
+	<td align="left" valign="top">
+	<img src="Schematics/Photo_Bot.jpg" width="300">
+	<br>
+	<br>
+	<br>
+	</td>
+
+    <td align="left" valign="top" width="400">
+    <!--spacer -->
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+    </td>
+    <td>
+    </td>
+	
+    <td colspan="2">
+	<a name="Power"><b>1.) Power Board</b></a>
+	<br>
+	<a href="Schematics/Photo_PowerBoard.jpg"><img src="Schematics/Photo_PowerBoard.jpg" width="300"></a>
+	<br>Two 7.2V batteries are placed in series to form a 14.4V power supply. To obtain 5V, we run the 14.4V through a voltage regulator. We tap from here to power the other circuit boards. A power MOSFET protects the components in case the batteries are plugged in backwards. The kill switch opens and closes the connection. Click on the image to view calculations.
+	<br>
+	<br>
+	<a href="VoltageCalc.html"><img src="Schematics/Circuit_PowerBoard.jpg" width="800"></a>
+<br>
+<br>
+<br>
+
+	<a name="Main"><b>2.) Main Board</b></a>
+	<br>
+	<a href="Schematics/Photo_MainBoard.jpg"><img src="Schematics/Photo_MainBoard.jpg" width="300"></a>
+	<br>The main board contains the E128 microprocessor connections. All port connections tap into this board.
+	<br>
+	<br>
+	</td>
+  </tr>
+  
+  <tr>
+    <td>
+	<!-- spacer -->
+	</td>
+    <td>
+	<!-- spacer -->
+	</td>	
+	<td>
+	E128 20Pin
+	<br>
+	<a href="Schematics/Circuit_E128_20.jpg"><img src="Schematics/Circuit_E128_20.jpg" height="200"></a>
+	</td>
+	<td>
+	E128 24Pin
+	<br>
+	<a href="Schematics/Circuit_E128_24.jpg"><img src="Schematics/Circuit_E128_24.jpg" height="200"></a>
+	</td>
+  </tr>
+ 
+   <tr>
+    <td>
+	<!-- spacer -->
+	</td>
+    <td>
+	<!-- spacer -->
+	</td>	
+	<td>
+	E128 SPI Pins
+	<br>
+	<a href="Schematics/Circuit_E128_SPI.jpg"><img src="Schematics/Circuit_E128_SPI.jpg" height="200"></a>
+	</td>
+	<td>
+	Motor 0
+	<br>
+	<a href="Schematics/Circuit_Motor0.jpg"><img src="Schematics/Circuit_Motor0.jpg" height="200"></a>
+	</td>
+  </tr>
+
+
+  <tr>
+    <td>
+	<!-- spacer -->
+	</td>
+    <td>
+	<!-- spacer -->
+	</td>	
+	<td>
+	Motor 1
+	<br>
+	<a href="Schematics/Circuit_Motor1.jpg"><img src="Schematics/Circuit_Motor1.jpg" height="200"></a>
+	</td>
+	<td>
+	Red Debug LED
+	<br>
+	<a href="Schematics/Circuit_RedDebugLED.jpg"><img src="Schematics/Circuit_RedDebugLED.jpg" height="200"></a>
+	</td>
+  </tr>
+  
+  <tr>
+    <td>
+	<!-- spacer -->
+	</td>
+    <td>
+	<!-- spacer -->
+	</td>	
+	<td>
+	Red Indicator LED
+	<br>
+	<a href="Schematics/Circuit_RedJumboLED.jpg"><img src="Schematics/Circuit_RedJumboLED.jpg" height="200"></a>
+	</td>
+	<td>
+	Green Indicator LED
+	<br>
+	<a href="Schematics/Circuit_GreenJumboLED.jpg"><img src="Schematics/Circuit_GreenJumboLED.jpg" height="200"></a>
+	</td>
+  </tr>
+
+  <tr>
+    <td>
+	<!-- spacer -->
+	</td>
+    <td>
+	<!-- spacer -->
+	</td>	
+	<td>
+	Bumper switch
+	<br>
+	<a href="Schematics/Circuit_BumperSwitch.jpg"><img src="Schematics/Circuit_BumperSwitch.jpg" height="200"></a>
+	<br>
+	<br>
+	<br>
+	</td>
+  </tr>
+  
+   <tr>
+    <td>
+	<!-- spacer -->
+	</td>
+    <td>
+	<!-- spacer -->
+	</td>	
+	<td colspan=3 align="left">
+	<a name="Arm"><b>3.) Arm Board</b></a>
+	<br>
+	<a href="Schematics/Photo_ArmBoard.jpg"><img src="Schematics/Photo_ArmBoard.jpg" width="300"></a>
+	<br> The arm uses a 42BYG228-R stepper motor to raise the upper arm and a HXT900 servo motor to swing the lower arm
+	<br>
+	<br>
+	</td>
+  </tr> 
+  
+   <tr>
+    <td>
+	<!-- spacer -->
+	</td>
+    <td>
+	<!-- spacer -->
+	</td>	
+	<td colspan=3>
+	Stepper Motor for upper arm
+	<br>
+	<a href="Schematics/Circuit_Stepper.jpg"><img src="Schematics/Circuit_Stepper.jpg" height="300"></a>
+	</td>
+  </tr>
+  
+   <tr>
+    <td>
+	<!-- spacer -->
+	</td>
+    <td>
+	<!-- spacer -->
+	</td>	
+	<td valign="top">
+	Servo Motor for lower arm
+	<br>
+	<a href="Schematics/Circuit_Servo.jpg"><img src="Schematics/Circuit_Servo.jpg" height="140"></a>
+	</td>
+	<td>
+	Yellow Debug LED
+	<br>
+	<a href="Schematics/Circuit_YellowDebugLED.jpg"><img src="Schematics/Circuit_YellowDebugLED.jpg" height="140"></a>
+	<br>
+	<br>
+	<br>
+	<br>
+	</td>
+  </tr>
+
+   <tr>
+    <td>
+	<!-- spacer -->
+	</td>
+    <td>
+	<!-- spacer -->
+	</td>	
+	<td colspan=3 align="left">
+	<a name="Tape"><b>4.) Tape Sensor Board</b></a>
+	<br>
+	<a href="Schematics/Photo_TapeBoard.jpg"><img src="Schematics/Photo_TapeBoard.jpg" width="300"></a>
+	<br>7 tape sensors are tied to 2 quad op-amps and use similar circuit diagrams. They output an analog signal. We implemented Schmitt triggers and hysteresis in software. Click on the image for calculations
+	<br>
+	<br>
+	</td>
+  </tr> 
+  
+   <tr>
+    <td>
+	<!-- spacer -->
+	</td>
+    <td>
+	<!-- spacer -->
+	</td>	
+	<td colspan=3>
+	Tape Sensor circuit
+	<br>
+	<a href="TapeCalc.html"><img src="Schematics/Circuit_TapeSensor.jpg" height="300"></a>
+	<br>
+	<br>
+	<br>
+	</td>
+  </tr>  
+  
+    <tr>
+    <td>
+	<!-- spacer -->
+	</td>
+    <td>
+	<!-- spacer -->
+	</td>	
+	<td colspan=3 align="left">
+	<a name="IR"><b>5.) IR Phototransistor</b></a>
+	<br>
+	<a href="IRCalc.html"><img src="Schematics/Circuit_IRPhototransistor.jpg" width="500"></a>
+	<br>A signal conditioning circuit produces a digital signal when IR is sensed. The board was not implemented in our final design but was needed for check-off. Click on the image to view calculations.
+	<br>
+	<br>
+	</td>
+  </tr> 
+  
+ 
+
+  
+  <tr>
+    <td>
+	<!-- spacer -->
+	</td>
+    <td>
+	<!-- spacer -->
+	</td>	
+	<td colspan=3>
+
+<a name="Datasheets"><b>DATASHEETS</b></a>
+<br>
+<a href="http://www.datasheetcatalog.org/datasheet2/9/0oa8seftq8d6peigox0lrx6e9wwy.pdf" target="_blank">LM324N Operational Amplifier</a>
+<br>
+<a href="http://www.datasheetcatalog.org/datasheet/nationalsemiconductor/DS007746.PDF" target="_blank">LM7805C Voltage Regulator</a>
+<br>
+<a href="http://www.datasheetcatalog.org/datasheet/QT/QRB1134.pdf" target="_blank">QRB1134 Tape Sensor</a>
+<br>
+<a href="http://www.datasheetcatalog.org/datasheet/SGSThomsonMicroelectronics/mXurruu.pdf" target="_blank">L293B HBridge</a>
+<br>
+<a href="http://www.fairchildsemi.com/ds/2N/2N7000.pdf" target="_blank">2N7000 N-Channel MOSFET</a>
+<br>
+<a href="http://www.datasheetcatalog.org/datasheet/irf/irlz34n.pdf" target="_blank">IRLZ34N N-Channel Power MOSFET</a>
+<br>
+<a href="http://www.datasheetcatalog.org/datasheet/irf/irfr5305.pdf" target="_blank">IRFR 5305 P-Channel Power MOSFET</a>
+<br>
+<a href="http://www.jameco.com/Jameco/Products/ProdDS/155433.pdf" target="_blank">42BYG228-R Stepper Motor</a>
+<br>
+<a href="http://www.servodatabase.com/servo/hextronik/hxt900" target="_blank">HXT900 Servo Motor</a>
+
+
+
+
+
+
+
+	
+    </td>
+
+  </tr>
+
+
+</style1>
+
+
+</body>
+
+</html>

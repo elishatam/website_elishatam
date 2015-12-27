@@ -1,0 +1,89 @@
+div.container {
+width:98%;
+margin:1%;
+}
+
+table#tableHome {
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  width:450px;
+}
+table#table1 {
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  width:700px;
+}
+td, tr {
+  text-align:left; /*there for IE. This centers all the text inside your table cells. Counter it by setting tr and td to align left*/
+	font-family: verdana, sans-serif;
+	font-size: .9em;
+	line-height: 1.5em;
+	color: #000000;
+}
+
+td#td1{
+  text-align:left;
+	font-family: verdana, sans-serif;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	color: #000000;
+  
+}
+/*Class Tags*/
+.CSScenter {
+text-align: center;
+}
+
+.CSSright {
+text-align: right;
+}
+
+.CSSAlignTop {
+vertical-align:top;
+}
+
+/*id Tags*/
+#para1_5 {
+font-size: 1.5em;
+}
+
+}
+style1 {
+	font-family: verdana, sans-serif;
+	font-size: 0.9em;
+	text-align: justify;
+	line-height: 2em;
+	color: #000000; }
+
+style2 {
+	font-family: verdana, sans-serif;
+	font-size: 0.9em;
+	text-align: justify;
+	line-height: 2em;
+	color: #000000; 
+}
+
+body {
+	background-color: #ffffff;
+	scrollbar-base-color: #ffffff; 
+	scrollbar-face-color: #ffffff; 
+	scrollbar-track-color: #cccccc; 
+	scrollbar-arrow-color: #003366;
+	scrollbar-highlight-color: #ffffff; 
+	scrollbar-3dlight-color: #cccccc; 
+	scrollbar-shadow-color: #999999;
+	scrollbar-darkshadow-color: #003366; 
+}
+
+
+
+
+
+a:link {font-family: verdana; COLOR: #003366; TEXT-DECORATION: none; font-weight: none}
+a:visited {font-family: verdana; COLOR: #336699; TEXT-DECORATION: none; font-weight: none}
+a:hover {font-family: verdana; COLOR: #6699cc; TEXT-DECORATION: none; font-weight: none}
+a:active {font-family: verdana; COLOR: #99ccff; TEXT-DECORATION: none; font-weight: none}
+
+.hiddenDiv {display:none;}

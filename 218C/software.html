@@ -1,0 +1,254 @@
+<html>
+<head>
+
+<title> Stanford ME 218C Final Project, Spring 2010</title>
+
+<link rel="stylesheet" type="text/css" href="mystyles.css">
+
+
+</head>
+
+<body>
+<style1>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc" bgcolor="#ffffff">
+
+
+  <tr>
+
+    <td align="left" colspan=4>
+	<img src="photos/Heading.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td colspan=4>
+	<hr>
+    </td>
+
+  </tr>
+
+  <tr>
+    <td align="center" font size="0.9em" colspan=4>
+	<a href="index.html">OVERVIEW</a>
+	 | <a href="hardware.html">HARDWARE</a>	
+	 | <a href="software.html">SOFTWARE</a>	
+	 | <a href="gallery.html">GALLERY</a>	
+	 | <a href="theteam.html">THE TEAM</a>	
+
+
+<br>
+<br>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+
+<table width="1000" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc" bgcolor="#ffffff">
+
+  <tr height="50">
+    <td width="100" align="center">
+
+    <b>Header Files</b>
+    </td>
+
+    <td width="100" align="center">
+    <b>Code Files</b>
+    </td>
+
+    <td width="100" align="center">
+    <b>Pseudocode</b>
+
+    </td>
+
+    <td width="300" align="center">
+    <b>Description</b>
+    </td>
+
+  <tr>
+    <td align="center" height="30">
+	<a href="Code/Main.c"> </a>
+
+    </td>
+
+    <td align="center">
+	<a href="Code/Main_PIC.html">Boat_Main.c</a>
+    </td>
+
+    <td align="center">
+	<a href="photos/MainPIC_StateDiagramSecCon.jpg">Boat_Main State Diagram</a>
+    </td>
+
+    <td>
+	Initializes the cipher
+    <br>Verifies ability to broadcast between fleet members
+    <br>Handles all of the communication between the RFID reader, Security Controller, Neptune, HC, and broadcasts
+    </td>
+  </tr>
+
+
+  <tr>
+
+    <td align="center">
+	<a href="Code/ArmH.html"></a>
+    </td>
+
+    <td align="center">
+	<a href="Code/RFID_PIC.html">BOAT_RFID.asm</a>
+    </td>
+
+    <td align="center">
+
+	<a href="Code/RFID_PIC_P.htm">BOAT_RFID.html</a>
+    </td>
+
+    <td>
+
+Written in Assembly code
+<br>Handles SPI communication between the RFID reader and Security Controller
+
+    </td>
+  </tr>
+
+  
+    <tr>
+
+    <td align="center">
+	<a href="Code/ArmH.html"></a>
+    </td>
+
+    <td align="center">
+	<a href="Code/AUX_PIC.html">BOAT_AUX_PIC.c</a>
+    </td>
+
+    <td align="center">
+
+	<a href="Code/AUX_PIC_P.htm">BOAT_AUX_PIC.html</a>
+    </td>
+
+    <td>
+
+    Controls the crab capacity stepper motor and DC motor propellers
+
+    </td>
+  </tr>
+
+  
+  <tr>
+
+    <td align="center">
+	<a href="Code/ArmH.html"></a>
+    </td>
+
+    <td align="center">
+	<a href="Code/HC_Main.html">HC_Main.c</a>
+    </td>
+
+    <td align="center">
+
+	<a href="Code/HC_Main_P.htm">HC_Main.html</a>
+    </td>
+
+    <td>
+
+Ties the LCD, XB Communication, Analogs, and Timer modules together
+
+    </td>
+  </tr>
+
+
+  <tr>
+
+    <td align="center">
+	<a href="Code/HC_XBeeH.html">HC_XBee.h</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/HC_XBeeC.html">HC_XBee.c</a>
+    </td>
+
+    <td align="center">
+
+	<a href="Code/XB_Comm_P.htm">HC_XBee.html</a>
+    </td>
+
+    <td>
+
+Handles communications over ZigBee. These messages are all from the Boat. It ignores broadcasts from other radios
+
+    </td>
+  </tr>
+
+  <tr>
+
+    <td align="center">
+	<a href="Code/timerH.html">HC_Timer.h</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/timerC.html">HC_Timer.c</a>
+    </td>
+
+    <td align="center">
+
+	<a href="Code/Timer_P.htm">HC_Timer.html</a>
+    </td>
+
+    <td>
+
+Implements a 1ms timer
+
+    </td>
+  </tr>
+
+  
+  <tr>
+
+    <td align="center">
+	<a href="Code/HC_AnalogsH.html">HC_Analogs.h</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/HC_AnalogsC.html">HC_Analogs.c</a>
+    </td>
+
+    <td align="center">
+
+	<a href="Code/Analogs_P.htm">HC_Analogs.html</a>
+    </td>
+
+    <td>
+
+Reads in signals from the potentiometer, accelerometer, and microphone. 
+<br>Manipulates the signals to control the propellers
+
+    </td>
+  </tr>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+</table>
+<br>
+<br>
+<br>
+</td>
+</tr>
+</table>
+
+</style1>
+
+
+</body>
+
+</html>

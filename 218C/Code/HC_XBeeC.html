@@ -1,0 +1,2811 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="HC_XBeeC_files/filelist.xml">
+<title>/******************************************************</title>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>6 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>3</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas>false</w:ValidateAgainstSchemas>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotUnderlineInvalidXML/>
+  <w:DoNotShadeFormData/>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:AdjustLineHeightInTable/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:841.85pt 1190.55pt;
+	margin:56.7pt 56.7pt 56.7pt 56.7pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in;text-justify-trim:punctuation'>
+
+<div class=Section1>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>/******************************************************</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>XBee.c</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>ME 218C Project</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>Team Odyssey</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>May 31, 2010</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>Sends and receives packets from XBee radio transmitter</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>Public Functions:</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>Send_Packet()</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>Receive_Packet()</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>*******************************************************/</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#include &lt;stdio.h&gt;</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#include &lt;hidef.h&gt;</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'>      </span><i><span
+style='color:#666666'>/* common defines and macros */</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#include &lt;mc9s12e128.h&gt;</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'>     </span><i><span
+style='color:#666666'>/* derivative information */</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#include &lt;S12E128bits.h&gt;</span><span style='font-size:
+10.0pt;font-family:"Courier New"'> <i><span style='color:#666666'>/* E128 bit
+definitions<span style='mso-spacerun:yes'>  </span>*/</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#include &lt;bitdefs.h&gt;</span><span style='font-size:10.0pt;
+font-family:"Courier New"'> <i><span style='color:#666666'>/* BIT0HI,
+BIT0LO....definitions */</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#include</span><span style='font-size:10.0pt;font-family:"Courier New"'>
+<span style='color:red'>&quot;S12eVec.h&quot;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#include</span><span style='font-size:10.0pt;font-family:"Courier New"'>
+<span style='color:red'>&quot;XBee.h&quot;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#include</span><span style='font-size:10.0pt;font-family:"Courier New"'>
+<span style='color:red'>&quot;LCD.h&quot;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#pragma LINK_INFO DERIVATIVE</span><span style='font-size:10.0pt;
+font-family:"Courier New"'> <span style='color:red'>&quot;SampleS12&quot;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//Boat XBee = 0x208A</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#define BOAT_ADDRESS_MSB 0x21</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#define BOAT_ADDRESS_LSB 0x8A</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#define XBEE_START_BYTE 0x7E</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#define SEND_MESSAGE 0x01</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'>        </span><i><span
+style='color:#666666'>//API identifyer for a sent message</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#define PACKET_LENGTH 30</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'>         </span><i><span
+style='color:#666666'>//predetermined based on protocal</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:#00B800'>#define DATA_BYTES 4</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><span style='mso-spacerun:yes'>             </span><i><span
+style='color:#666666'>//predetermined based on protocal</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//**********************************************************</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//Public Functions Prototypes</span></i><span style='font-size:
+10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//**********************************************************</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>void</span><span style='font-size:10.0pt;font-family:"Courier New"'>
+<b><span style='color:black'>XBee_Init</span></b><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>void</span><span style='font-size:10.0pt;font-family:"Courier New"'>
+<b><span style='color:black'>XBee_Transmit</span></b><span style='color:red'>(</span><span
+style='color:blue'>unsigned char</span> <span style='color:black'>byte1</span><span
+style='color:red'>,</span> <span style='color:blue'>unsigned char</span> <span
+style='color:black'>byte2</span><span style='color:red'>,</span> <span
+style='color:blue'>unsigned char</span> <span style='color:black'>byte3</span><span
+style='color:red'>);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>void</span><span style='font-size:10.0pt;font-family:"Courier New"'>
+<b><span style='color:black'>XBee_Receive</span></b><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//**********************************************************</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//Private Functions Prototypes</span></i><span style='font-size:
+10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//**********************************************************</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//**********************************************************</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//Module Level Variables</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//**********************************************************</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>static unsigned char</span><span style='font-size:10.0pt;
+font-family:"Courier New"'> <span style='color:black'>receive_complete</span> <span
+style='color:red'>=</span> <span style='color:#A900A9'>0</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>static unsigned char</span><span style='font-size:10.0pt;
+font-family:"Courier New"'> <span style='color:black'>transmit_packet</span><span
+style='color:red'>[</span><span style='color:black'>PACKET_LENGTH</span><span
+style='color:red'>] =</span> <span style='color:#A900A9'>0</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>static unsigned char</span><span style='font-size:10.0pt;
+font-family:"Courier New"'> <span style='color:black'>receive_packet</span><span
+style='color:red'>[</span><span style='color:black'>PACKET_LENGTH</span><span
+style='color:red'>] =</span> <span style='color:#A900A9'>0</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>static unsigned char</span><span style='font-size:10.0pt;
+font-family:"Courier New"'> <span style='color:black'>receive_buffer</span><span
+style='color:red'>[</span><span style='color:black'>PACKET_LENGTH</span><span
+style='color:red'>] =</span> <span style='color:#A900A9'>0</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>static unsigned char</span><span style='font-size:10.0pt;
+font-family:"Courier New"'> <span style='color:black'>transmit_index</span> <span
+style='color:red'>=</span> <span style='color:#A900A9'>0</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>static unsigned char</span><span style='font-size:10.0pt;
+font-family:"Courier New"'> <span style='color:black'>receive_index</span> <span
+style='color:red'>=</span> <span style='color:#A900A9'>0</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>static unsigned char</span><span style='font-size:10.0pt;
+font-family:"Courier New"'> <span style='color:black'>waterlogged</span> <span
+style='color:red'>=</span> <span style='color:#A900A9'>0</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//**********************************************************</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//Module Code</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//**********************************************************</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>void</span><span style='font-size:10.0pt;font-family:"Courier New"'>
+<b><span style='color:black'>XBee_Init</span></b><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>)</span><b><span
+style='color:black'>printf</span></b><span style='color:red'>(&quot;sci init</span><span
+style='color:#FF00CC'>\r\n</span><span style='color:red'>&quot;);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>SCI1BDH</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><span
+style='mso-spacerun:yes'>                   </span><i><span style='color:#666666'>//1.
+Set Baud Rate to 9615 Hz</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>SCI1BDL</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>156</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>SCI1CR1</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:black'>b00100100</span><span
+style='color:red'>;</span><span style='mso-spacerun:yes'>          </span><i><span
+style='color:#666666'>// 7 - One pin operation</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                 </span><i><span
+style='color:#666666'>// 6 - SCI Enabled in Wait Mode</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                 </span><i><span
+style='color:#666666'>// 5 - RXD and TXD NOT connected internally</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                 </span><i><span
+style='color:#666666'>// 4 - Eight Bit Data</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                 </span><i><span
+style='color:#666666'>// 3 - Address mark wakeup</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                 </span><i><span
+style='color:#666666'>// 2 - Idle character bit count beings after stop bit</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                 </span><i><span
+style='color:#666666'>// 1 - No Parity</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                 </span><i><span
+style='color:#666666'>// 0 - Even Parity (but it is disable)</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>SCI1CR2</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:black'>b00101100</span><span
+style='color:red'>;</span><span style='mso-spacerun:yes'>          </span><i><span
+style='color:#666666'>// 7 - Transmit Interrupt Enabled</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                 </span><i><span
+style='color:#666666'>// 6 - NO Transmit Complete Interrupt</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                 </span><i><span
+style='color:#666666'>// 5 - Receive Interrupt Enabled</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                 </span><i><span
+style='color:#666666'>// 4 - NO Idle Line Interrupt</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                 </span><i><span
+style='color:#666666'>// 3 - TXD Enabled</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><span
+style='mso-spacerun:yes'>                             </span><i><span
+style='color:#666666'>// 2 - RXD Enabled</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                 </span><i><span
+style='color:#666666'>// 1 - NO Receiver Wake Up</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                 </span><i><span
+style='color:#666666'>// 0 - Currently Don't Send Break</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:red'>}</span><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>void</span><span style='font-size:10.0pt;font-family:"Courier New"'>
+<span style='color:black'>interrupt _Vec_sci1</span> <b><span style='color:
+black'>XBee_Interrupt</span></b><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>){</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:blue'>char</span> <span
+style='color:black'>i</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:blue'>unsigned char</span>
+<span style='color:black'>status</span><span style='color:red'>,</span><span
+style='color:black'>data</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:blue'>static unsigned char</span>
+<span style='color:black'>framelength</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>status</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:black'>SCI1SR1</span><span style='color:red'>;</span><span
+style='mso-spacerun:yes'>     </span><i><span style='color:#666666'>//read in
+the status reg</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>data</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:black'>SCI1DRL</span><span style='color:red'>;</span><span
+style='mso-spacerun:yes'>       </span><i><span style='color:#666666'>//get the
+data will clear flags</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><i><span style='color:#666666'>//RECEIVE
+interrupt</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>((</span><span style='color:black'>status</span> <span
+style='color:red'>&amp;</span> <span style='color:black'>_S12_RDRF</span><span
+style='color:red'>) ==</span> <span style='color:black'>_S12_RDRF</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>    </span>receive_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_index</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:black'>data</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(</span><span style='color:black'>receive_index</span> <span
+style='color:red'>==</span> <span style='color:#A900A9'>0</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><i><span style='color:#666666'>//just a
+temp thing until the actual framelength comes through</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>      </span>framelength</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>20</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(</span><span style='color:black'>receive_index</span> <span
+style='color:red'>==</span> <span style='color:#A900A9'>2</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>      </span>framelength</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:black'>data</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>    </span>receive_index</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>++;</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(</span><span style='color:black'>receive_index</span> <span
+style='color:red'>==</span> <span style='color:black'>framelength</span><span
+style='color:red'>+</span><span style='color:#A900A9'>4</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>      </span>receive_complete</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>1</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>      </span>receive_index</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(( ((</span><span style='color:black'>receive_packet</span><span
+style='color:red'>[</span><span style='color:#A900A9'>7</span><span
+style='color:red'>] &amp;</span> <span style='color:black'>BIT1HI</span><span
+style='color:red'>) ==</span> <span style='color:#A900A9'>0</span><span
+style='color:red'>) &amp;&amp; (</span><span style='color:black'>receive_packet</span><span
+style='color:red'>[</span><span style='color:#A900A9'>3</span><span
+style='color:red'>] ==</span> <span style='color:#A900A9'>0x81</span><span
+style='color:red'>)) || (</span><span style='color:black'>receive_packet</span><span
+style='color:red'>[</span><span style='color:#A900A9'>3</span><span
+style='color:red'>] ==</span> <span style='color:#A900A9'>0x89</span><span
+style='color:red'>)) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:blue'>for</span></b><span
+style='color:red'>(</span><span style='color:black'>i</span><span
+style='color:red'>=</span><span style='color:#A900A9'>0</span><span
+style='color:red'>;</span><span style='color:black'>i</span><span
+style='color:red'>&lt;</span><span style='color:black'>PACKET_LENGTH</span><span
+style='color:red'>;</span><span style='color:black'>i</span><span
+style='color:red'>++) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>          </span>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>i</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:black'>receive_packet</span><span
+style='color:red'>[</span><span style='color:black'>i</span><span
+style='color:red'>];</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:red'>}</span> <b><span
+style='color:blue'>else</span></b> <span style='color:red'>{</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><i><span style='color:#666666'>//TRANFER
+interrrupt</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(((</span><span style='color:black'>status</span> <span
+style='color:red'>&amp;</span> <span style='color:black'>_S12_TDRE</span><span
+style='color:red'>) ==</span> <span style='color:black'>_S12_TDRE</span><span
+style='color:red'>)){</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>      </span>SCI1DRL</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:black'>transmit_packet</span><span style='color:red'>[</span><span
+style='color:black'>transmit_index</span><span style='color:red'>];</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>      </span>transmit_index</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>++;</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(</span><span style='color:black'>transmit_index</span> <span
+style='color:red'>==</span> <span style='color:black'>PACKET_LENGTH</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><i><span style='color:#666666'>//the
+transfer is done</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>        </span>transmit_index</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><i><span style='color:#666666'>//turn
+off tx clear interrupt</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>        </span>SCI1CR2</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>&amp;=
+~</span><span style='color:black'>_S12_TIE</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:red'>}</span><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>void</span><span style='font-size:10.0pt;font-family:"Courier New"'>
+<b><span style='color:black'>XBee_Transmit</span></b><span style='color:red'>(</span><span
+style='color:blue'>unsigned char</span> <span style='color:black'>byte1</span><span
+style='color:red'>,</span> <span style='color:blue'>unsigned char</span> <span
+style='color:black'>byte2</span><span style='color:red'>,</span><span
+style='color:blue'>unsigned char</span> <span style='color:black'>byte3</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:blue'>unsigned char</span>
+<span style='color:black'>i</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:blue'>char</span> <span
+style='color:black'>junk</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:blue'>static char</span> <span
+style='color:black'>packetID</span> <span style='color:red'>=</span> <span
+style='color:#A900A9'>1</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>transmit_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>0</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:black'>XBEE_START_BYTE</span><span
+style='color:red'>;</span><span style='mso-spacerun:yes'>      </span><i><span
+style='color:#666666'>//start deliminator</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>transmit_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>1</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:#A900A9'>0</span><span
+style='color:red'>;</span><span style='mso-spacerun:yes'>                   
+</span><i><span style='color:#666666'>//data frame length MSB</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>transmit_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>2</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:black'>DATA_BYTES</span>
+<span style='color:red'>+</span> <span style='color:#A900A9'>5</span><span
+style='color:red'>;</span><span style='mso-spacerun:yes'>      </span><i><span
+style='color:#666666'>//data frame length LSB</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>transmit_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>3</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:black'>SEND_MESSAGE</span><span
+style='color:red'>;</span><span style='mso-spacerun:yes'>        </span><i><span
+style='color:#666666'>//send message API Identifier</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>transmit_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>4</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:black'>packetID</span><span
+style='color:red'>;</span><span style='mso-spacerun:yes'>             </span><i><span
+style='color:#666666'>//unique packet identifier, can be anything, but</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>packetID</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>++;</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>                                </span><i><span
+style='color:#666666'>//should be different for tx to tx</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>transmit_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>5</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:black'>BOAT_ADDRESS_MSB</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>transmit_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>6</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:black'>BOAT_ADDRESS_LSB</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>transmit_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>7</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:#A900A9'>0x00</span><span
+style='color:red'>;</span><span style='mso-spacerun:yes'>                 
+</span><i><span style='color:#666666'>//options, should set to zero</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>transmit_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>8</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:black'>byte1</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>transmit_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>9</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:black'>byte2</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>transmit_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>10</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:black'>byte3</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><i><span style='color:#666666'>//now compute
+checksum of data frame (index 3 to end of data frame)</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>transmit_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>DATA_BYTES</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>+</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>8</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:#A900A9'>0xff</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><b><span style='color:blue'>for</span></b><span
+style='color:red'>(</span><span style='color:black'>i</span><span
+style='color:red'>=</span><span style='color:#A900A9'>3</span><span
+style='color:red'>;</span><span style='color:black'>i</span><span
+style='color:red'>&lt;</span><span style='color:black'>DATA_BYTES</span><span
+style='color:red'>+</span><span style='color:#A900A9'>8</span><span
+style='color:red'>;</span><span style='color:black'>i</span><span
+style='color:red'>++) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>    </span>transmit_packet</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>DATA_BYTES</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>+</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>8</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] -=</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:black'>transmit_packet</span><span
+style='color:red'>[</span><span style='color:black'>i</span><span
+style='color:red'>];</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>)</span><b><span
+style='color:black'>printf</span></b><span style='color:red'>(&quot;<span
+style='mso-spacerun:yes'>     </span>sent packet: %x %x %x %x %x %x %x %x (%x
+%x %x) %x</span><span style='color:#FF00CC'>\r\n</span><span style='color:red'>&quot;,</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>               
+</span>transmit_packet</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:red'>[</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A900A9'>0</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:red'>],</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'>transmit_packet</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:red'>[</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A900A9'>1</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:red'>],</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:black'>transmit_packet</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:red'>[</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A900A9'>2</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:red'>],</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>               
+</span>transmit_packet</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:red'>[</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A900A9'>3</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:red'>],</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'>transmit_packet</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:red'>[</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A900A9'>4</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:red'>],</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:black'>transmit_packet</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:red'>[</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A900A9'>5</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:red'>],</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>               
+</span>transmit_packet</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:red'>[</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A900A9'>6</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:red'>],</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'>transmit_packet</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:red'>[</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A900A9'>7</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:red'>],</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:black'>transmit_packet</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:red'>[</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A900A9'>8</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:red'>],</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>               
+</span>transmit_packet</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:red'>[</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:#A900A9'>9</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:red'>],</span><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'>transmit_packet</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:red'>[</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#A900A9'>10</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:red'>],</span><span style='font-size:10.0pt;font-family:
+"Courier New";color:black'>transmit_packet</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:red'>[</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#A900A9'>11</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:red'>]);</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><i><span style='color:#666666'>//initiate the
+transfer by sending first byte</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>junk</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:black'>SCI1SR1</span><span style='color:red'>;</span> <i><span
+style='color:#666666'>// must read status register before any transmit</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>junk</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:black'>SCI1DRL</span><span style='color:red'>;</span> <i><span
+style='color:#666666'>// must read data register before any transmit</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><i><span style='color:#666666'>//turn on
+transfer reg clear interrupt</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>SCI1CR2</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>|=</span>
+<span style='color:black'>_S12_TIE</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>SCI1DRL</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:black'>transmit_packet</span><span style='color:red'>[</span><span
+style='color:#A900A9'>0</span><span style='color:red'>];</span><span
+style='mso-spacerun:yes'>    </span><i><span style='color:#666666'>//send first
+byte</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>transmit_index</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>1</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:red'>}</span><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:blue'>void</span><span style='font-size:10.0pt;font-family:"Courier New"'>
+<b><span style='color:black'>XBee_Receive</span></b><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:blue'>static unsigned int</span>
+<span style='color:black'>potID</span><span style='color:red'>,</span> <span
+style='color:black'>crabsonboat</span><span style='color:red'>,</span> <span
+style='color:black'>crabsonshore</span> <span style='color:red'>=</span> <span
+style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:blue'>unsigned char</span>
+<span style='color:black'>framelength</span><span style='color:red'>,</span><span
+style='color:black'>checksum</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:blue'>unsigned char</span>
+<span style='color:black'>i</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(</span><span style='color:black'>receive_complete</span> <span
+style='color:red'>==</span> <span style='color:#A900A9'>0</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><b><span style='color:blue'>return</span></b><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><i><span style='color:#666666'>/*(void)printf(&quot;r<span
+style='mso-spacerun:yes'>     </span>received packet: %x %x %x %x %x %x %x %x
+%x %x %x %x\r\n&quot;,</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>             
+</span>receive_buffer[0],receive_buffer[1],receive_buffer[2],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>             
+</span>receive_buffer[3],receive_buffer[4],receive_buffer[5],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>             
+</span>receive_buffer[6],receive_buffer[7],receive_buffer[8],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>             
+</span>receive_buffer[9],receive_buffer[10],receive_buffer[11]);</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>(void)printf(&quot;<span
+style='mso-spacerun:yes'>                       </span>%x %x %x %x %x %x %x %x
+%x %x %x %x\r\n&quot;,</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>             
+</span>receive_buffer[12],receive_buffer[13],receive_buffer[14],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>             
+</span>receive_buffer[15],receive_buffer[16],receive_buffer[17],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>             
+</span>receive_buffer[18],receive_buffer[19],receive_buffer[20],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>             
+</span>receive_buffer[21],receive_buffer[22],receive_buffer[23]);</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>              </span>*/</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><i><span style='color:#666666'>//determine
+data frame length</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>framelength</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:black'>receive_buffer</span><span style='color:red'>[</span><span
+style='color:#A900A9'>2</span><span style='color:red'>];</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><i><span style='color:#666666'>//check
+checksum</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(</span><span style='color:black'>receive_buffer</span><span
+style='color:red'>[</span><span style='color:#A900A9'>3</span><span
+style='color:red'>] ==</span> <span style='color:#A900A9'>0x89</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><b><span style='color:blue'>switch</span></b><span
+style='color:red'>(</span><span style='color:black'>receive_buffer</span><span
+style='color:red'>[</span><span style='color:#A900A9'>5</span><span
+style='color:red'>]){</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>case</span></b>
+<span style='color:#A900A9'>0x00</span><span style='color:red'>:</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><i><span style='color:#666666'>//(void)printf(&quot;Successfully
+sent packet Id: &quot;);</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:blue'>break</span></b><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>case</span></b>
+<span style='color:#A900A9'>0x01</span><span style='color:red'>:</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>)</span><b><span
+style='color:black'>printf</span></b><span style='color:red'>(&quot;No ACK
+failure on sent packet Id: &quot;);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:blue'>break</span></b><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>case</span></b>
+<span style='color:#A900A9'>0x02</span><span style='color:red'>:</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>)</span><b><span
+style='color:black'>printf</span></b><span style='color:red'>(&quot;No airspace
+failure on sent packet Id: &quot;);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:blue'>break</span></b><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>case</span></b>
+<span style='color:#A900A9'>0x03</span><span style='color:red'>:</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>)</span><b><span
+style='color:black'>printf</span></b><span style='color:red'>(&quot;Purge
+failure on sent packet Id: &quot;);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:blue'>break</span></b><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><i><span style='color:#666666'>//print
+packet ID</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>)</span><b><span
+style='color:black'>printf</span></b><span style='color:red'>(&quot;%x</span><span
+style='color:#FF00CC'>\r\n</span><span style='color:red'>&quot;,</span><span
+style='color:black'>receive_buffer</span><span style='color:red'>[</span><span
+style='color:#A900A9'>4</span><span style='color:red'>]);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>    </span>checksum</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0xff</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><b><span style='color:blue'>for</span></b><span
+style='color:red'>(</span><span style='color:black'>i</span><span
+style='color:red'>=</span><span style='color:#A900A9'>3</span><span
+style='color:red'>;</span><span style='color:black'>i</span><span
+style='color:red'>&lt;</span><span style='color:#A900A9'>3</span><span
+style='color:red'>+</span><span style='color:black'>framelength</span><span
+style='color:red'>;</span><span style='color:black'>i</span><span
+style='color:red'>++) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>    </span>checksum</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>-=</span>
+<span style='color:black'>receive_buffer</span><span style='color:red'>[</span><span
+style='color:black'>i</span><span style='color:red'>];</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(</span><span style='color:black'>receive_buffer</span><span
+style='color:red'>[</span><span style='color:#A900A9'>3</span><span
+style='color:red'>] ==</span> <span style='color:#A900A9'>0x81</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>)</span><b><span
+style='color:black'>printf</span></b><span style='color:red'>(&quot;r<span
+style='mso-spacerun:yes'>     </span>received packet: %x %x %x %x %x %x %x %x
+%x %x %x %x</span><span style='color:#FF00CC'>\r\n</span><span
+style='color:red'>&quot;,</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>              </span>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>0</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>1</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>2</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>              </span>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>3</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>4</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>5</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>              </span>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>6</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>7</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>8</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>              </span>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>9</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>10</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>11</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>]);</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>)</span><b><span
+style='color:black'>printf</span></b><span style='color:red'>(&quot;<span
+style='mso-spacerun:yes'>                       </span>%x %x %x %x %x %x %x %x
+%x %x %x %x</span><span style='color:#FF00CC'>\r\n</span><span
+style='color:red'>&quot;,</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>              </span>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>12</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>13</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>14</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>             </span>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>15</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>16</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>17</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>              </span>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>18</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>19</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>20</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>              </span>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>21</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>22</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>23</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>]);</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>((</span><span style='color:black'>receive_buffer</span><span
+style='color:red'>[</span><span style='color:#A900A9'>7</span><span
+style='color:red'>] &amp;</span> <span style='color:black'>BIT1HI</span><span
+style='color:red'>) ==</span> <span style='color:black'>BIT1HI</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>)</span><b><span
+style='color:black'>printf</span></b><span style='color:red'>(&quot;BBBBB</span><span
+style='color:#FF00CC'>\r\n</span><span style='color:red'>&quot;,</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>      </span>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>4</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>5</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>]);</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><span style='color:red'>}</span> <b><span
+style='color:blue'>else</span></b> <span style='color:red'>{</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><i><span style='color:#666666'>//(void)printf(&quot;T\r\n&quot;);</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>)</span><b><span
+style='color:black'>printf</span></b><span style='color:red'>(&quot;TTTTT___Received
+targeted message from %x%x: %x %x %x</span><span style='color:#FF00CC'>\r\n</span><span
+style='color:red'>&quot;,</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>          </span>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>4</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>5</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>8</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>9</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>],</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#A900A9'>10</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>]);</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(</span><span style='color:black'>checksum</span> <span
+style='color:red'>!=</span> <span style='color:black'>receive_buffer</span><span
+style='color:red'>[</span><span style='color:#A900A9'>3</span><span
+style='color:red'>+</span><span style='color:black'>framelength</span><span
+style='color:red'>]) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>         </span><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>)</span><b><span
+style='color:black'>printf</span></b><span style='color:red'>(&quot;XXXXXXX
+Checksum mismatch %x %x</span><span style='color:#FF00CC'>\r\n</span><span
+style='color:red'>&quot;,</span><span style='color:black'>checksum</span><span
+style='color:red'>,</span><span style='color:black'>receive_buffer</span><span
+style='color:red'>[</span><span style='color:#A900A9'>3</span><span
+style='color:red'>+</span><span style='color:black'>framelength</span><span
+style='color:red'>]);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>      </span>potID</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>= (</span><span
+style='color:blue'>unsigned int</span><span style='color:red'>)</span><span
+style='color:black'>receive_buffer</span><span style='color:red'>[</span><span
+style='color:#A900A9'>8</span><span style='color:red'>];</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><i><span style='color:#666666'>//check
+team assignment</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>switch</span></b><span
+style='color:red'>(</span><span style='color:black'>potID</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:blue'>case</span></b>
+<span style='color:#A900A9'>0x11</span><span style='color:red'>:</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>          </span><b><span style='color:black'>LCD_Team</span></b><span
+style='color:red'>(</span><span style='color:#A900A9'>1</span><span
+style='color:red'>);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>          </span>crabsonshore</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>          </span>crabsonboat</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>          </span>waterlogged</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>          </span><b><span style='color:blue'>break</span></b><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:blue'>case</span></b>
+<span style='color:#A900A9'>0x22</span><span style='color:red'>:</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>          </span>crabsonshore</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>          </span>crabsonboat</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>          </span>waterlogged</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>          </span><b><span style='color:black'>LCD_Team</span></b><span
+style='color:red'>(</span><span style='color:#A900A9'>2</span><span
+style='color:red'>);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>          </span><b><span style='color:blue'>break</span></b><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:blue'>case</span></b>
+<span style='color:#A900A9'>0x44</span><span style='color:red'>:</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>          </span>crabsonshore</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>          </span>crabsonboat</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>          </span>waterlogged</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>          </span><b><span style='color:black'>LCD_Wait_for_Team</span></b><span
+style='color:red'>();</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>          </span><b><span style='color:blue'>break</span></b><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><i><span style='color:#666666'>//check
+for start season</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(</span><span style='color:black'>potID</span> <span
+style='color:red'>==</span> <span style='color:#A900A9'>0xcc</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>        </span>waterlogged</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:black'>LCD_Start</span></b><span
+style='color:red'>();</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>        </span>crabsonboat</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>        </span>crabsonshore</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><i><span style='color:#666666'>//check to
+see if we are waterlogged</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(</span><span style='color:black'>potID</span> <span
+style='color:red'>==</span> <span style='color:#A900A9'>0xdd</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>        </span>waterlogged</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>1</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:black'>LCD_Waterlogged</span></b><span
+style='color:red'>();</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><i><span style='color:#666666'>//(void)printf(&quot;waterlogged\r\n&quot;);</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>        </span>crabsonboat</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><i><span style='color:#666666'>//check to
+see if we are at drydock</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>((</span><span style='color:black'>potID</span> <span
+style='color:red'>==</span> <span style='color:#A900A9'>0xff</span><span
+style='color:red'>) &amp;&amp; (</span><span style='color:black'>waterlogged</span>
+<span style='color:red'>==</span> <span style='color:#A900A9'>1</span><span
+style='color:red'>)) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>        </span>waterlogged</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:black'>LCD_Fixed</span></b><span
+style='color:red'>();</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><i><span style='color:#666666'>//(void)printf(&quot;drydock\r\n&quot;);</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><i><span style='color:#666666'>//check to
+see if it is unloading dock</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>((</span><span style='color:black'>potID</span> <span
+style='color:red'>==</span> <span style='color:#A900A9'>0xee</span><span
+style='color:red'>) &amp;&amp; (</span><span style='color:black'>waterlogged</span>
+<span style='color:red'>==</span> <span style='color:#A900A9'>0</span><span
+style='color:red'>)) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>        </span>crabsonshore</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>+=</span>
+<span style='color:black'>crabsonboat</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>        </span>crabsonboat</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:black'>LCD_Unload</span></b><span
+style='color:red'>(</span><span style='color:black'>crabsonshore</span><span
+style='color:red'>);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><i><span style='color:#666666'>//(void)printf(&quot;Crab
+Unloaded!\r\n&quot;);</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><i><span style='color:#666666'>//put the
+new info on the LCD screen</span></i><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>((</span><span style='color:black'>potID</span> <span
+style='color:red'>&gt;=</span> <span style='color:#A900A9'>0xa1</span><span
+style='color:red'>) &amp;&amp; (</span><span style='color:black'>potID</span> <span
+style='color:red'>&lt;=</span> <span style='color:#A900A9'>0xac</span><span
+style='color:red'>)) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(</span><span style='color:black'>waterlogged</span> <span
+style='color:red'>==</span> <span style='color:#A900A9'>0</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>          </span>crabsonboat</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>= (</span><span
+style='color:blue'>unsigned int</span><span style='color:red'>)</span><span
+style='color:black'>receive_buffer</span><span style='color:red'>[</span><span
+style='color:#A900A9'>10</span><span style='color:red'>] *</span> <span
+style='color:#A900A9'>256</span> <span style='color:red'>+ (</span><span
+style='color:blue'>unsigned int</span><span style='color:red'>)</span><span
+style='color:black'>receive_buffer</span><span style='color:red'>[</span><span
+style='color:#A900A9'>11</span><span style='color:red'>];</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>          </span><span style='color:red'>(</span><span
+style='color:blue'>void</span><span style='color:red'>)</span><b><span
+style='color:black'>printf</span></b><span style='color:red'>(&quot;on boat %i</span><span
+style='color:#FF00CC'>\r\n</span><span style='color:red'>&quot;,</span><span
+style='color:black'>crabsonboat</span><span style='color:red'>);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>          </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(</span><span style='color:black'>crabsonboat</span> <span
+style='color:red'>&gt;</span> <span style='color:#A900A9'>299</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>            </span><b><span style='color:black'>LCD_Full</span></b><span
+style='color:red'>();</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span
+style='mso-spacerun:yes'>        </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>          </span><b><span style='color:blue'>else</span></b>
+<span style='color:red'>{</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>            </span><b><span style='color:black'>LCD_Update</span></b><span
+style='color:red'>((</span><span style='color:black'>potID</span> <span
+style='color:red'>&amp;</span> <span style='color:#A900A9'>0x000f</span><span
+style='color:red'>),(</span><span style='color:blue'>unsigned int</span><span
+style='color:red'>)</span><span style='color:black'>receive_buffer</span><span
+style='color:red'>[</span><span style='color:#A900A9'>9</span><span
+style='color:red'>],</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>                </span>crabsonboat</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>,</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>crabsonshore</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>);</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>          </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><b><span style='color:blue'>if</span></b><span
+style='color:red'>(</span><span style='color:black'>potID</span> <span
+style='color:red'>==</span> <span style='color:#A900A9'>0xa0</span><span
+style='color:red'>) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>        </span>waterlogged</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>        </span><b><span style='color:black'>LCD_Verify</span></b><span
+style='color:red'>((</span><span style='color:black'>potID</span> <span
+style='color:red'>&amp;</span> <span style='color:#A900A9'>0x000f</span><span
+style='color:red'>),(</span><span style='color:blue'>unsigned int</span><span
+style='color:red'>)</span><span style='color:black'>receive_buffer</span><span
+style='color:red'>[</span><span style='color:#A900A9'>9</span><span
+style='color:red'>]);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>      </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>    </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><b><span style='color:blue'>for</span></b><span
+style='color:red'>(</span><span style='color:black'>i</span><span
+style='color:red'>=</span><span style='color:#A900A9'>0</span><span
+style='color:red'>;</span><span style='color:black'>i</span><span
+style='color:red'>&lt;</span><span style='color:black'>PACKET_LENGTH</span><span
+style='color:red'>;</span><span style='color:black'>i</span><span
+style='color:red'>++){</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>    </span>receive_buffer</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>[</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>i</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:red'>] =</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:#A900A9'>0</span><span
+style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-spacerun:yes'>  </span><span style='color:red'>}</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>  </span>receive_complete</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> <span style='color:red'>=</span>
+<span style='color:#A900A9'>0</span><span style='color:red'>;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New";
+color:red'>}</span><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>/*</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>void XBee_Debug(void) {</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>unsigned char i,j,ch;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>transmit_packet[0] =
+XBEE_START_BYTE;<span style='mso-spacerun:yes'>      </span>//start deliminator</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>transmit_packet[1] =
+0;<span style='mso-spacerun:yes'>                    </span>//data frame length
+MSB</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>transmit_packet[2] =
+DATA_BYTES + 5;<span style='mso-spacerun:yes'>  </span>//data frame length LSB</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>transmit_packet[3] =
+SEND_MESSAGE;<span style='mso-spacerun:yes'>        </span>//send message API
+Identifier</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>transmit_packet[4] =
+0x01;<span style='mso-spacerun:yes'>                </span>//unique packet
+identifier, can be anything, but</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span
+style='mso-spacerun:yes'>                                       </span>//should
+be different for tx to tx</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>transmit_packet[5] =
+BOAT_ADDRESS_MSB;</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>transmit_packet[6] =
+BOAT_ADDRESS_LSB;</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>transmit_packet[7] =
+0x00;<span style='mso-spacerun:yes'>                  </span>//options, should
+set to zero</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>(void)printf(&quot;XBEE
+debug\r\n&quot;);</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'> 
+</span>(void)printf(&quot;Choose target -- a: boat, b: broadcast\r\n&quot;);</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>ch = (char)getchar();</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>if(ch == 'a') {</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>   
+</span>(void)printf(&quot;sending message to boat\r\n&quot;);</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>    </span>transmit_packet[5] =
+BOAT_ADDRESS_MSB;</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>    </span>transmit_packet[6] =
+BOAT_ADDRESS_LSB;</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>} else {</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>   
+</span>(void)printf(&quot;sending broadcast message\r\n&quot;);</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>    </span>transmit_packet[5] =
+0xff;</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>    </span>transmit_packet[6] =
+0xff;</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>}</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'> 
+</span>(void)printf(&quot;choose byte to send:\n\r&quot;);</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>(void)printf(&quot;1:
+0x01\r\n&quot;);</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>(void)printf(&quot;2:
+0x02\r\n&quot;);</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>(void)printf(&quot;3:
+0x03\r\n&quot;);</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>(void)printf(&quot;4:
+0xab\r\n&quot;);</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>(void)printf(&quot;5:
+0xee\r\n&quot;);</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>(void)printf(&quot;6:
+0xff\r\n&quot;);</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>for(;;) {</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>    </span>if(receive_complete ==
+1) {</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>(void)printf(&quot;rcved
+packet: %x %x %x %x %x %x %x %x %x %x %x %x\r\n&quot;,</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>receive_packet[0],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>receive_packet[1],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>receive_packet[2],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>receive_packet[3],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>receive_packet[4],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>receive_packet[5],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>receive_packet[6],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>receive_packet[7],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>receive_packet[8],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>receive_packet[9],</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>receive_packet[10],</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>receive_packet[11]);</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>receive_complete =
+0;</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>if(receive_packet[3]
+== 0x89) {</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>switch(receive_packet[5]){</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>          </span>case 0x00:</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>    </span><span
+style='mso-spacerun:yes'>        </span>(void)printf(&quot;Successfully sent
+packet Id: &quot;);</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>            </span>break;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>          </span>case 0x01:</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>           
+</span>(void)printf(&quot;No ACK failure on sent packet Id: &quot;);</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>            </span>break;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>          </span>case 0x02:</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>           
+</span>(void)printf(&quot;No airspace failure on sent packet Id: &quot;);</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>            </span>break;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>          </span>case 0x03:</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>           
+</span>(void)printf(&quot;Purge failure on sent packet Id: &quot;);</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>            </span>break;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>}</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>(void)printf(&quot;%x\r\n&quot;,receive_packet[4]);</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>}</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>if(receive_packet[3]
+== 0x81) {</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>if((receive_packet[7]
+&amp; BIT1HI) == BIT1HI) {</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>         
+</span>(void)printf(&quot;Received broadcast message from %x%x: %x\r\n&quot;,</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>         
+</span>receive_packet[4],receive_packet[5],receive_packet[8]);</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>} else {</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>         
+</span>(void)printf(&quot;Received targeted message from %x%x: %x\r\n&quot;,</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>         
+</span>receive_packet[4],receive_packet[5],receive_packet[8]);</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>}</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>}</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>     
+</span>for(j=0;j&lt;PACKET_LENGTH;j++){</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>receive_packet[j]
+= 0;</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>}</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>    </span>}</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>    </span>if(kbhit()) {</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-tab-count:1'>      </span><span
+style='mso-spacerun:yes'>    </span>// User selects options.</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>ch =
+(char)getchar();</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>switch(ch) {</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>case '1':</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>         
+</span>transmit_packet[8] = 0x01;</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>          </span>break;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>case '2':</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>         
+</span>transmit_packet[8] = 0x02;</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>          </span>break;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>case '3':</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>         
+</span>transmit_packet[8] = 0x03;</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>          </span>break;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>case '4':</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>          </span>transmit_packet[8]
+= 0xab;</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>          </span>break;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>case '5':</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>         
+</span>transmit_packet[8] = 0xee;</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>          </span>break;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>        </span>case '6':</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>         
+</span>transmit_packet[8] = 0xff;</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>          </span>break;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>}</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>//now compute
+checksum of data frame (index 3 to end of data frame)</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>     
+</span>transmit_packet[DATA_BYTES+8] = 0xff;</span></i><span style='font-size:
+10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>     
+</span>for(i=3;i&lt;DATA_BYTES+8;i++) {</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>transmit_packet[DATA_BYTES+8] -= transmit_packet[i];</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>}</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>     
+</span>(void)printf(&quot;data byte: %x\r\n&quot;,transmit_packet[8]);</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>     
+</span>(void)printf(&quot;checksum :
+%x\r\n&quot;,transmit_packet[DATA_BYTES+8]);</span></i><span style='font-size:
+10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>     
+</span>(void)printf(&quot;sent packet: %x %x %x %x %x %x %x %x %x %x %x
+%x\r\n&quot;,</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>transmit_packet[0],</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>transmit_packet[1],</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>transmit_packet[2],</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>transmit_packet[3],</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>transmit_packet[4],</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>transmit_packet[5],</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>transmit_packet[6],</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>transmit_packet[7],</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>transmit_packet[8],</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>transmit_packet[9],</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>transmit_packet[10],</span></i><span style='font-size:10.0pt;font-family:
+"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>       
+</span>transmit_packet[11]);</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>//initiate the
+transfer by sending first byte</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>ch = SCI1SR1; //
+must read status register before any transmit</span></i><span style='font-size:
+10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>ch = SCI1DRL; //
+must read data register before any transmit</span></i><span style='font-size:
+10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>//turn on transfer
+reg clear interrupt</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>SCI1CR2 |= _S12_TIE;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>SCI1DRL =
+transmit_packet[0];<span style='mso-spacerun:yes'>    </span>//send first byte</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>      </span>transmit_index = 1;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>    </span>}</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'><span style='mso-spacerun:yes'>  </span>}</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>}</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>*/</span></i><span style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:10.0pt;font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//**********************************************************</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//End Module Code</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:none;background:white;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:10.0pt;font-family:"Courier New";
+color:#666666'>//**********************************************************</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

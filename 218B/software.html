@@ -1,0 +1,262 @@
+<html>
+<head>
+
+<title> Stanford ME 218B Final Project, Winter 2010</title>
+
+<link rel="stylesheet" type="text/css" href="mystyles.css">
+
+
+</head>
+
+<body>
+<style1>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc" bgcolor="#ffffff">
+
+
+  <tr>
+    <td align="left" colspan=4>
+	<img src="photos/HeadingFirefox.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td colspan=4>
+	<hr>
+    </td>
+
+  </tr>
+
+  <tr>
+    <td align="center" font size="0.9em" colspan=4>
+	<a href="index.html">OVERVIEW</a>
+	 | <a href="hardware.html">HARDWARE</a>	
+	 | <a href="software.html">SOFTWARE</a>	
+	 | <a href="gallery.html">GALLERY</a>	
+	 | <a href="theteam.html">THE TEAM</a>	
+
+<br>
+<br>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+
+<table width="1000" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc" bgcolor="#ffffff">
+
+  <tr height="50">
+    <td width="100" align="center">
+    <b>Header Files</b>
+    </td>
+
+    <td width="100" align="center">
+    <b>Code Files</b>
+    </td>
+
+    <td width="100" align="center">
+    <b>Pseudocode</b>
+    </td>
+
+    <td width="300" align="center">
+    <b>Description</b>
+    </td>
+
+  <tr>
+    <td align="center" height="30">
+	<a href="Code/Main.c"> </a>
+    </td>
+
+    <td align="center">
+	<a href="Code/MainC.html">Main.c</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/Main.html">Main.html</a>
+	<br>
+	<a href="Code/MainStateDiagram.jpg">Main State Diagram</a>
+    </td>
+
+    <td>
+	Uses a state machine to run the robot at a high level
+    </td>
+  </tr>
+
+
+  <tr>
+    <td align="center">
+	<a href="Code/ArmH.html">Arm.h</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/ArmC.html">Arm.c</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/Arm.html">Arm.html</a>
+    </td>
+
+    <td>
+
+Swings the arm out to attack.
+<br>Waves the arm in victory dance
+
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td align="center">
+	<a href="Code/IRSensorH.html">IRSensor.h</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/IRSensorC.html">IRSensor.c</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/IRSensor.html">IRSensor.html</a>
+    </td>
+
+    <td>
+Reads the input signal from the IR phototransistor circuit.
+<br>Not implemented in our final code but needed for check-off
+    </td>
+  </tr>
+
+
+  <tr>
+    <td align="center" height="30">
+	<a href="Code/MotorsH.html">Motors.h</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/MotorsC.html">Motors.c</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/Motors.html">Motors.html</a>
+    </td>
+
+    <td>
+Handles motor movement: straight, differential, turn.
+<br>Tracks encoder counts and translates into distance.
+<br>Implements PID for closed loop control. 
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td align="center" height="30">
+	<a href="Code/myTimerH.html">myTimer.h</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/myTimerC.html">myTimer.c</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/myTimer.html">myTimer.html</a>
+    </td>
+
+    <td>
+Starts off a 1ms timer
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td align="center" height="30">
+	<a href="Code/PositionH.html">Position.h</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/PositionC.html">Position.c</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/Position.html">Position.html</a>
+    </td>
+
+    <td>
+Navigates the robot between points on the board.
+
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td align="center" height="30">
+	<a href="Code/PWM01H.html">PWM01.h</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/PWM01C.html">PWM01.c</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/PWM01.html">PWM01.html</a>
+    </td>
+
+    <td>
+Sets up Channels 0 and 1 for PWM. Used by the motors
+    </td>
+  </tr>
+
+
+  <tr>
+    <td align="center">
+	<a href="Code/SPIH.html">SPI.h</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/SPIC.html">SPI.c</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/SPI.html">SPI.html</a>
+    </td>
+
+    <td>
+The E128 queries the Target Commander over SPI for command instructions.
+<br>
+We are only querying the TC with 0xAA and 0xEx. We do not send 0xBx.
+
+    </td>
+  </tr>
+
+  
+   <tr>
+    <td align="center" height="30">
+	<a href="Code/TapeSensorsH.html">TapeSensors.h</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/TapeSensorsC.html">TapeSensors.c</a>
+    </td>
+
+    <td align="center">
+	<a href="Code/TapeSensors.html">TapeSensors.html</a>
+    </td>
+
+    <td>
+Tracks and aligns with tape sensors on the floor
+    </td>
+  </tr> 
+
+</table>
+<br>
+<br>
+<br>
+</td>
+</tr>
+</table>
+
+</style1>
+
+
+</body>
+
+</html>

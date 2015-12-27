@@ -1,0 +1,135 @@
+<html>
+<head>
+
+<title>Weight Puzzle, September 2015</title>
+
+<link rel="stylesheet" type="text/css" href="mystyles.css">
+
+
+</head>
+
+<body>
+<style1>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc">
+
+  <tr>
+    <td align="left" colspan=3 >
+      <br>
+      <h1 style="color:#08298A">&nbsp&nbspEscape The Room: Weight Puzzle</h1>
+      <!--<img src="photos/Heading.jpg"> -->
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan=3>
+      <hr>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" font size="0.9em" colspan=3>
+	     <a href="index.html">OVERVIEW</a>
+	     | <a href="hardware.html">HARDWARE</a>	
+	     | <a href="software.html">SOFTWARE</a>	
+
+        <br>
+        <br>
+    </td>
+  </tr>
+
+
+  <tr>
+
+    <td align="center" valign="top" width="520">
+      <img src="photos/strainGauge01.png" width="445">
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    </td>
+
+    <td valign="top">
+      <b>MECHANICAL STRUCTURE</b>
+      <br>
+      The puzzle is made of up 5 scales, and each scale contains a load cell. The strain gauge load cell that measures electrical resistance changes in response to deformation caused by a force. This load cell can read up to 10kg (22lbs).
+      <br>
+      <br>
+      The load cell is mounted in a "Z-formation" between 2 plastic (ABS plastic) pieces. There are 4 strain gauges on the load cell. When torque is applied to the bar and bends the bar, the strain gauges will measure the bending distortion: 2 measure compression and 2 measure tension. When these 4 strain gauges are set up in a wheatstone bridge formation, the load cell accurately measures small changes in resistance and outputs a resulting voltage.
+      <br>
+      <br>
+      From there the voltage is passed to an amplifier for a more measurable signal.
+      <br>
+      <br> Each of the 10 ABS plastic pieces were cut, sanded, and drilled with a Dremel Rotary Tool.
+      <br>
+      <br>
+      <br>
+      <br>
+    </td>
+    <td width="25">
+    </td>
+  </tr>  
+
+
+
+  <tr>
+  	<td align="center">
+    	<a href="photos/weightPuzzleBlockDiagram.png"><img src="photos/weightPuzzleBlockDiagram.png" width="445"></a>
+    	<br>
+    	<br>
+  	</td>
+
+    <td width="300" valign="top">
+    	<b>ELECTRICAL BLOCK DIAGRAM</b>
+      <br>
+      Each of the 5 scales is connected to an amplifier circuit and the output is connected to a GPIO pin on the Arduino microcontroller.
+      <br>
+      <br>
+      A magnetic lock is connected to a relay which is controlled by the Arduino. Based on the weights the Arduino reads from the scales, the Arduino will open or close the relay to unlock or lock the magnetic lock.
+      <br>
+      <br>
+      A push button and LED is used for user interface.
+    </td>
+
+    <td width="25">
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="center">
+      <a href="photos/WeightPuzzleSchematic.png"><img src="photos/WeightPuzzleSchematic.png" width="445"> </a>
+      <br>
+      <br>
+    </td>
+
+    <td width="300" valign="top">
+      <b>ELECTRICAL SCHEMATIC</b>
+      <br>
+      <br>Datasheets:
+      <br><a href="http://www.amazon.com/Seco-Larm-E-941SA-80Q-Mini-Maglock-lb/dp/B000G7ZE1M/ref=sr_1_10?s=hi&ie=UTF8&qid=1448146647&sr=1-10&keywords=seco-larm">Magnetic lock: Seco-Larm E-941SA-80Q Mini Maglock</a>
+      <br><a href="http://www.seco-larm.com/pdfs/Mi-E941SA.pdf">Magnetic lock: Seco-Larm E-941SA-600</a>
+      <br><a href="http://www.mouser.com/ds/2/316/ds_61B05_en_js-469954.pdf">Relay: JS1-B-5V-F</a>
+      <br><a href="https://www.arduino.cc/en/Main/ArduinoBoardUno">Arduino Uno</a>
+      <br><a href="https://www.sparkfun.com/products/13230">HX711 amplifier</a>
+      <br><a href="https://www.sparkfun.com/products/13329">Load cell-10kg, Straight Bar (TAL220)</a>
+      <br><a href="http://www.amazon.com/RockBirds-12V-Switching-Supply-Adapter/dp/B00VM292AO/ref=sr_1_2?s=electronics&ie=UTF8&qid=1448146887&sr=1-2&keywords=12v+dc+power+supply">12VDC 2A Power Supply Adapter</a>
+      
+      
+      
+      
+    </td>
+
+    <td width="25">
+    </td>
+  </tr>  
+
+
+  
+
+</style1>
+
+
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<html>
+<head>
+
+<title> Stanford ME 218C Final Project, Spring 2010</title>
+
+<link rel="stylesheet" type="text/css" href="mystyles.css">
+
+
+</head>
+
+<body>
+<style1>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#cccccc">
+
+  <tr>
+
+    <td align="left" colspan=3>
+	<img src="photos/Heading.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td colspan=3>
+	<hr>
+    </td>
+
+  </tr>
+
+  <tr>
+    <td align="center" font size="0.9em" colspan=3>
+	<a href="index.html">OVERVIEW</a>
+	 | <a href="hardware.html">HARDWARE</a>	
+	 | <a href="software.html">SOFTWARE</a>	
+	 | <a href="gallery.html">GALLERY</a>	
+	 | <a href="theteam.html">THE TEAM</a>	
+
+
+<br>
+<br>
+
+   </td>
+  </tr>
+
+
+  
+  <tr>
+    <td valign="top" width="200">
+	<a href="hardware.html">Drawings</a>
+<br>
+		<a href="boat.html">&nbsp;&nbsp;&nbsp;Boat</a>
+		<br>
+		<a href="controller.html">&nbsp;&nbsp;&nbsp;Controller</a>
+<br>
+<br>
+        <a href="circuits.html">Circuit Designs</a>
+<br><br>
+        <a href="BOM.htm">Bill of Materials</a>
+    </td>
+
+
+    <td valign="top" align="center" width="440">
+    Front of the controller
+    <br>
+    <a href="photos/HC_DrawingFrontDimensions.jpg"><img src="photos/HC_DrawingFrontDimensions.jpg" width="300"></a>	<br>
+	<br>
+	<br>
+	</td>
+	<td valign="top" align="center" width="440">
+    <br>
+	<a href="photos/HC_Front.jpg"><img src="photos/HC_Front.jpg" width="300"></a>
+    </td>
+    </tr>
+    
+     <tr>
+    <td>
+    <!-- spacer -->
+    </td>
+    <td align="center" valign="top">
+    Top of the controller
+    <br>
+    <a href="photos/HC_DrawingTopDimensions.jpg"><img src="photos/HC_DrawingTopDimensions.jpg" width="300"></a>
+    <br>
+    <br>
+    </td>
+    
+    <td valign="top" align="center">
+    <br>
+    <a href="photos/HC_Top_Caption.jpg"><img src="photos/HC_Top_Caption.jpg" width="300"></a>
+    <br>
+    <br>
+    <br>
+    <br>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+    <!-- spacer -->
+    </td>
+    <td align="center" valign="top">
+    <a href="photos/HC.jpg"><img src="photos/HC.jpg" width="300"></a>
+    <br>
+    <br>
+    </td>
+
+    <td valign="top" width="400">
+    The controller was made with a 10" x 14" x 5" storage container. Felt covered the container to hide the electronics. The two claws at the front of the container acted as props. Straps were attached to the sides of the box so the player could wear the controller during game play. This design was portable and allowed for easy movement.
+    
+    <br>
+    <br>
+    There were 3 user inputs
+    <ol>
+      <li><b>Throttle:</b> </li> Moving the throttle back and forth allowed the player to drive the boat backwards and forwards.
+      <li><b>Accelerometer:</b></li> An accelerometer was placed inside the controller. The player tilted the entire controller side to side to steer the boat.
+      <li><b>Microphone:</b></li>When the player spoke into the microphone, the player lit up the boat LEDs.
+    </ol>
+    <br>
+    <br>
+    <br>
+    </td>
+    </tr>
+
+    <tr>
+    <td>
+    <!-- spacer -->
+    </td>
+    <td valign="top" align="center" width="440">
+	<a href="photos/LCD_1waiting.jpg"><img src="photos/LCD_1waiting.jpg" width="300"></a>	<br>
+	<br>
+	<br>
+	</td>
+	<td valign="top" width="440">
+    The LCD display provided instructions and feedback to the user. 
+    <br>
+    <br>1) This first display occurs at the start of the game and is waiting for a team RFID card swipe.
+	</td>
+  </tr>
+ 
+    <tr>
+    <td>
+    <!-- spacer -->
+    </td>
+    <td valign="top" align="center" width="440">
+	<a href="photos/LCD_2redteam.jpg"><img src="photos/LCD_2redteam.jpg" width="300"></a>	<br>
+	<br>
+	<br>
+	</td>
+	<td valign="top" width="440">
+    2) Once swiped, our boat knows it is on the Red team. At this point, a cipher has been created within the team members. The cipher is used to encrypt crab pot data, which is shared between team members through broadcast messages.  The data is encrypted to prevent the opposing team from understanding our broadcasts
+	</td>
+  </tr>
+
+  
+   <tr>
+    <td>
+    <!-- spacer -->
+    </td>
+    <td valign="top" align="center" width="440">
+	<a href="photos/LCD_3verify.jpg"><img src="photos/LCD_3verify.jpg" width="300"></a>	<br>
+	<br>
+	<br>
+	</td>
+	<td valign="top" width="440">
+    3) After the team assignment, the boats must verify that they can correctly encrypt and decrypt messages between team members. A test RFID card is used to represent fake crab pot 0. The last byte of the test RFID card represents a fake crab rate. When 1 boat swipes this test RFID card, the other team boats must display crab pot 0 and the fake crab rate on their controller. 
+    <br>
+    <br> This is an example of a verification message.
+    <br>
+    <br>
+    </td>
+  </tr>
+  
+  
+      <tr>
+    <td>
+    <!-- spacer -->
+    </td>
+    <td valign="top" align="center" width="440">
+	<a href="photos/LCD_4start.jpg"><img src="photos/LCD_4start.jpg" width="300"></a>	<br>
+	<br>
+	<br>
+	</td>
+	<td valign="top" width="440">
+    4) After verification, Neptune sends out the Open Season broadcast, and the game begins.
+	</td>
+  </tr>
+
+
+     <tr>
+    <td>
+    <!-- spacer -->
+    </td>
+    <td valign="top" align="center" width="440">
+	<a href="photos/LCD_5update.jpg"><img src="photos/LCD_5update.jpg" width="300"></a>	<br>
+	<br>
+	<br>
+	</td>
+	<td valign="top" width="440">
+    5) This displays the data of the most recent crab pot visited by any of the Red team members.
+	</td>
+  </tr>
+
+    <tr>
+    <td>
+    <!-- spacer -->
+    </td>
+    <td valign="top" align="center" width="440">
+	<a href="photos/LCD_6unload.jpg"><img src="photos/LCD_6unload.jpg" width="300"></a>	<br>
+	<br>
+	<br>
+	</td>
+	<td valign="top" width="440">
+    6) Boats can only carry a max capacity of 300 crab. The boat can unload its catch at the Unloading Dock. This displays appears after swiping at the Unloading Dock.
+	</td>
+  </tr>
+  
+
+    <tr>
+    <td>
+    <!-- spacer -->
+    </td>
+    <td valign="top" align="center" width="440">
+	<a href="photos/LCD_7waterlogged.jpg"><img src="photos/LCD_7waterlogged.jpg" width="300"></a>	<br>
+	<br>
+	<br>
+	</td>
+	<td valign="top" width="440">
+    7) If water enters our waterlog funnel, our boat becomes waterlogged and we lose all of our current crab catch. We must fix our boat at the Dry Dock before we can continue to catch crab.
+	</td>
+  </tr>
+
+
+    <tr>
+    <td>
+    <!-- spacer -->
+    </td>
+    <td valign="top" align="center" width="440">
+	<a href="photos/LCD_8fixed.jpg"><img src="photos/LCD_8fixed.jpg" width="300"></a>	<br>
+	<br>
+	<br>
+	</td>
+	<td valign="top" width="440">
+    8) This is the display that occurs after the boat visits the Dry Dock. The boat is now ready to continue crabbing.
+	</td>
+  </tr>
+
+
+  
+
+</style1>
+
+
+</body>
+
+</html>
